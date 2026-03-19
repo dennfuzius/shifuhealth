@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "ShifuHealth – Traditionelle Chinesische Medizin",
+    "description": "Ihr Wegweiser für ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin. Fundiertes Wissen, saisonale Tipps und KI-gestützte Beratung."
+  },
+  "nav": {
+    "home": "Startseite",
+    "blog": "Blog",
+    "assistant": "KI-Assistent",
+    "language": "EN"
+  },
+  "hero": {
+    "title": "Ihr Weg zu ganzheitlicher Gesundheit",
+    "subtitle": "Entdecken Sie die Weisheit der Traditionellen Chinesischen Medizin – fundiert, verständlich und alltagsnah.",
+    "cta": "Blog entdecken",
+    "ctaAssistant": "KI-Assistent testen",
+    "feature1Title": "Fundiertes Wissen",
+    "feature1Text": "Evidenzbasierte Einblicke in die TCM, verständlich aufbereitet.",
+    "feature2Title": "Saisonale Tipps",
+    "feature2Text": "Leben Sie im Einklang mit den Jahreszeiten.",
+    "feature3Title": "KI-Assistent",
+    "feature3Text": "Ihr persönlicher Wegbegleiter für TCM-Fragen."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artikel über Traditionelle Chinesische Medizin, Gesundheitstipps und saisonale Empfehlungen.",
+    "readMore": "Weiterlesen",
+    "noArticles": "Noch keine Artikel vorhanden.",
+    "publishedAt": "Veröffentlicht am"
+  },
+  "assistant": {
+    "title": "KI-Assistent",
+    "subtitle": "Stellen Sie Ihre Fragen zur Traditionellen Chinesischen Medizin – unser KI-Assistent hilft Ihnen weiter.",
+    "placeholder": "Stellen Sie Ihre Frage...",
+    "comingSoon": "Demnächst verfügbar",
+    "comingSoonText": "Unser KI-gestützter TCM-Assistent wird bald hier verfügbar sein. Er wird Ihnen helfen, die Prinzipien der TCM besser zu verstehen und personalisierte Empfehlungen zu erhalten."
+  },
+  "footer": {
+    "tagline": "Weisheit der Traditionellen Chinesischen Medizin – verständlich und zugänglich.",
+    "disclaimer": "Die Inhalte dienen ausschließlich der Information und ersetzen keine ärztliche Beratung.",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

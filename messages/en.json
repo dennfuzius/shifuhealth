@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "ShifuHealth – Traditional Chinese Medicine",
+    "description": "Your guide to holistic health through Traditional Chinese Medicine. Evidence-based knowledge, seasonal tips, and AI-powered guidance."
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "assistant": "AI Assistant",
+    "language": "DE"
+  },
+  "hero": {
+    "title": "Your Path to Holistic Health",
+    "subtitle": "Discover the wisdom of Traditional Chinese Medicine — grounded, accessible, and practical for everyday life.",
+    "cta": "Explore the Blog",
+    "ctaAssistant": "Try the AI Assistant",
+    "feature1Title": "Grounded Knowledge",
+    "feature1Text": "Evidence-based insights into TCM, clearly explained.",
+    "feature2Title": "Seasonal Guidance",
+    "feature2Text": "Live in harmony with the seasons.",
+    "feature3Title": "AI Assistant",
+    "feature3Text": "Your personal guide for TCM questions."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles about Traditional Chinese Medicine, health tips, and seasonal recommendations.",
+    "readMore": "Read more",
+    "noArticles": "No articles yet.",
+    "publishedAt": "Published on"
+  },
+  "assistant": {
+    "title": "AI Assistant",
+    "subtitle": "Ask your questions about Traditional Chinese Medicine — our AI assistant is here to help.",
+    "placeholder": "Ask your question...",
+    "comingSoon": "Coming Soon",
+    "comingSoonText": "Our AI-powered TCM assistant will be available here soon. It will help you understand TCM principles better and receive personalized recommendations."
+  },
+  "footer": {
+    "tagline": "The wisdom of Traditional Chinese Medicine — accessible and understandable.",
+    "disclaimer": "Content is for informational purposes only and does not replace professional medical advice.",
+    "rights": "All rights reserved."
+  }
+}
