@@ -17,7 +17,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3099/de)",
       "Bash(curl -sI http://localhost:3099/)",
       "Bash(pkill -f 'next start')",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

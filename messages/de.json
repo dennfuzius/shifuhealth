@@ -111,10 +111,29 @@
     "publishedAt": "Veröffentlicht am"
   },
   "assistant": {
-    "title": "Shifu Qi",
-    "subtitle": "Stelle deine Fragen zur Traditionellen Chinesischen Medizin — Shifu Qi hilft dir weiter.",
+    "title": "Shifu Qi \u2014 Dein TCM-Experte",
+    "subtitle": "Beschreibe deine Beschwerden. Shifu Qi erkl\u00e4rt sie nach den Prinzipien der Traditionellen Chinesischen Medizin und gibt dir fundierte Empfehlungen.",
     "placeholder": "Stelle deine Frage...",
-    "comingSoon": "Demnächst verfügbar",
-    "comingSoonText": "Shifu Qi, dein KI-gestützter TCM-Assistent, wird bald hier verfügbar sein. Er wird dir helfen, die Prinzipien der TCM besser zu verstehen und personalisierte Empfehlungen zu erhalten."
+    "metaTitle": "Shifu Qi \u2013 KI-Assistent f\u00fcr Traditionelle Chinesische Medizin | ShifuHealth",
+    "metaDescription": "Frage Shifu Qi \u2014 deinen pers\u00f6nlichen KI-Experten f\u00fcr TCM. Erhalte fundierte Empfehlungen zu Ern\u00e4hrung, Kr\u00e4utern und Lebensstil nach den Prinzipien der Traditionellen Chinesischen Medizin.",
+    "infoCard1Title": "Wie funktioniert Shifu Qi?",
+    "infoCard1Text": "Shifu Qi nutzt eine umfangreiche TCM-Wissensbasis und erkl\u00e4rt deine Symptome nach den Prinzipien der Traditionellen Chinesischen Medizin \u2014 verst\u00e4ndlich und fundiert.",
+    "infoCard2Title": "Ist das echte medizinische Beratung?",
+    "infoCard2Text": "Nein. Shifu Qi bietet TCM-Wissen zur Orientierung, ersetzt aber keinen Arztbesuch. Bei ernsthaften Beschwerden empfehlen wir einen qualifizierten TCM-Praktiker.",
+    "infoCard3Title": "In welchen Sprachen?",
+    "infoCard3Text": "Shifu Qi antwortet auf Deutsch und Englisch. Weitere Sprachen folgen in zuk\u00fcnftigen Updates."
+  },
+  "chat": {
+    "label": "Shifu Qi fragen",
+    "online": "TCM-Experte \u00b7 Online",
+    "welcome": "Willkommen. Ich bin Shifu Qi \u2014 dein pers\u00f6nlicher TCM-Begleiter. Beschreibe deine Beschwerden und ich erkl\u00e4re sie aus der Sicht der Traditionellen Chinesischen Medizin.",
+    "inputPlaceholder": "Schreibe Shifu Qi...",
+    "disclaimer": "\u262f Kein Ersatz f\u00fcr medizinischen Rat",
+    "demoNote": "\u2726 Demo \u2014 Echte KI-Anbindung folgt in K\u00fcrze",
+    "chip1": "Bauchschmerzen",
+    "chip2": "Schlafprobleme",
+    "chip3": "M\u00fcdigkeit",
+    "chip4": "Erk\u00e4ltung",
+    "chip5": "Stress"
   }
 }

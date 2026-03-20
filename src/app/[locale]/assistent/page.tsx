@@ -1,11 +1,61 @@
+"use client";
+
 import { useTranslations } from "next-intl";
+import ShifuChat from "@/components/ShifuChat";
+
+/* ── Info card icons ──────────────────────────────────── */
+
+function IconGear() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="3" stroke="var(--color-primary)" strokeWidth="1.5" />
+      <path
+        d="M12 1v2m0 18v2m-9-11H1m22 0h-2M4.2 4.2l1.4 1.4m12.8 12.8l1.4 1.4M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+        stroke="var(--color-primary)"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function IconShield() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12 2l8 4v5c0 5.25-3.4 10.15-8 11.5C7.4 21.15 4 16.25 4 11V6l8-4z"
+        stroke="var(--color-primary)"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M9 12l2 2 4-4" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function IconGlobe() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" stroke="var(--color-primary)" strokeWidth="1.5" />
+      <path d="M2 12h20M12 2c3 3 4.5 6 4.5 10s-1.5 7-4.5 10c-3-3-4.5-6-4.5-10S9 5 12 2z" stroke="var(--color-primary)" strokeWidth="1.2" />
+    </svg>
+  );
+}
 
 export default function AssistantPage() {
   const t = useTranslations("assistant");
+  const tc = useTranslations("chat");
+
+  const infoCards = [
+    { icon: <IconGear />, titleKey: "infoCard1Title" as const, textKey: "infoCard1Text" as const },
+    { icon: <IconShield />, titleKey: "infoCard2Title" as const, textKey: "infoCard2Text" as const },
+    { icon: <IconGlobe />, titleKey: "infoCard3Title" as const, textKey: "infoCard3Text" as const },
+  ];
 
   return (
-    <div className="mx-auto max-w-3xl px-5 py-16">
-      <div className="mb-12">
+    <div style={{ backgroundColor: "var(--color-bg)" }}>
+      {/* Hero */}
+      <section className="mx-auto max-w-3xl px-5 pt-16 pb-10 text-center">
         <h1
           className="font-body text-[28px] md:text-[42px] font-bold mb-4"
           style={{ color: "var(--color-text)" }}
@@ -13,47 +63,54 @@ export default function AssistantPage() {
           {t("title")}
         </h1>
         <p
-          className="font-body text-[16px] leading-[1.75]"
+          className="font-body text-[16px] leading-[1.75] max-w-xl mx-auto"
           style={{ color: "var(--color-text-muted)" }}
         >
           {t("subtitle")}
         </p>
-      </div>
+      </section>
 
-      <div
-        className="card p-12 text-center"
-      >
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-          style={{ backgroundColor: "var(--color-surface)" }}
-        >
-          <svg
-            className="w-8 h-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="var(--color-primary)"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
-            />
-          </svg>
-        </div>
-        <h2
-          className="font-body text-[28px] font-bold mb-3"
-          style={{ color: "var(--color-text)" }}
-        >
-          {t("comingSoon")}
-        </h2>
+      {/* Embedded chat */}
+      <section className="mx-auto max-w-[720px] px-5 pb-6">
+        <ShifuChat height="600px" embedded />
         <p
-          className="font-body text-[16px] leading-[1.75] max-w-md mx-auto"
+          className="font-body text-[12px] italic text-center mt-3"
           style={{ color: "var(--color-text-muted)" }}
         >
-          {t("comingSoonText")}
+          {tc("demoNote")}
         </p>
-      </div>
+      </section>
+
+      {/* Info cards */}
+      <section className="mx-auto max-w-4xl px-5 py-16">
+        <div className="grid md:grid-cols-3 gap-6">
+          {infoCards.map((card, i) => (
+            <div
+              key={i}
+              className="card p-6"
+            >
+              <div
+                className="w-11 h-11 rounded-full flex items-center justify-center mb-4"
+                style={{ backgroundColor: "var(--color-primary-lt)", opacity: 0.85 }}
+              >
+                {card.icon}
+              </div>
+              <h3
+                className="font-body text-[16px] font-medium mb-2"
+                style={{ color: "var(--color-text)" }}
+              >
+                {t(card.titleKey)}
+              </h3>
+              <p
+                className="font-body text-[14px] leading-[1.7]"
+                style={{ color: "var(--color-text-muted)" }}
+              >
+                {t(card.textKey)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

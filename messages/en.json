@@ -111,10 +111,29 @@
     "publishedAt": "Published on"
   },
   "assistant": {
-    "title": "Shifu Qi",
-    "subtitle": "Ask your questions about Traditional Chinese Medicine — Shifu Qi is here to help.",
+    "title": "Shifu Qi — Your TCM Expert",
+    "subtitle": "Describe your symptoms. Shifu Qi explains them using Traditional Chinese Medicine principles and gives you grounded recommendations.",
     "placeholder": "Ask your question...",
-    "comingSoon": "Coming Soon",
-    "comingSoonText": "Shifu Qi, your AI-powered TCM assistant, will be available here soon. It will help you understand TCM principles better and receive personalized recommendations."
+    "metaTitle": "Shifu Qi – AI Assistant for Traditional Chinese Medicine | ShifuHealth",
+    "metaDescription": "Ask Shifu Qi — your personal AI expert for TCM. Get grounded recommendations on nutrition, herbs and lifestyle according to Traditional Chinese Medicine principles.",
+    "infoCard1Title": "How does Shifu Qi work?",
+    "infoCard1Text": "Shifu Qi uses an extensive TCM knowledge base and explains your symptoms according to Traditional Chinese Medicine principles — clearly and with depth.",
+    "infoCard2Title": "Is this real medical advice?",
+    "infoCard2Text": "No. Shifu Qi provides TCM knowledge for orientation but does not replace a doctor visit. For serious conditions, we recommend a qualified TCM practitioner.",
+    "infoCard3Title": "Which languages?",
+    "infoCard3Text": "Shifu Qi responds in German and English. More languages will follow in future updates."
+  },
+  "chat": {
+    "label": "Ask Shifu Qi",
+    "online": "TCM Expert · Online",
+    "welcome": "Welcome. I am Shifu Qi — your personal TCM companion. Describe your symptoms and I will explain them from the perspective of Traditional Chinese Medicine.",
+    "inputPlaceholder": "Write to Shifu Qi...",
+    "disclaimer": "☯ Not a substitute for medical advice",
+    "demoNote": "✦ Demo — Real AI integration coming soon",
+    "chip1": "Stomach pain",
+    "chip2": "Sleep issues",
+    "chip3": "Fatigue",
+    "chip4": "Cold & flu",
+    "chip5": "Stress"
   }
 }

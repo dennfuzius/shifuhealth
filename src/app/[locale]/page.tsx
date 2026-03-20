@@ -5,12 +5,12 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 import ScrollAnimator from "@/components/ScrollAnimator";
+import ShifuChat from "@/components/ShifuChat";
 
 /* ── Unsplash images ─────────────────────────────────── */
 
 const images = {
   hero: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
-  shifuQi: "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=700&q=80",
   blog1: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
   blog2: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=600&q=80",
   blog3: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80",
@@ -105,15 +105,6 @@ function CheckIcon() {
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="flex-shrink-0 mt-0.5">
       <circle cx="9" cy="9" r="8" stroke="var(--color-primary)" strokeWidth="1.2" />
       <path d="M5.5 9l2.5 2.5 4.5-5" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function YinYangSmall() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <circle cx="7" cy="7" r="6" stroke="var(--color-primary-lt)" strokeWidth="1" />
-      <path d="M7 1a6 6 0 000 12c0-3.3-3-6-3-6s3-2.7 3-6z" fill="var(--color-primary-lt)" opacity="0.3" />
     </svg>
   );
 }
@@ -336,78 +327,16 @@ export default function HomePage() {
               </div>
             </ScrollAnimator>
 
-            {/* Right: Image + Chat mockup */}
+            {/* Right: Live embedded chat */}
             <ScrollAnimator>
-              <div className="flex flex-col gap-6">
-                {/* Wellness image */}
-                <div className="relative overflow-hidden" style={{ borderRadius: "var(--radius-card)" }}>
-                  <Image
-                    src={images.shifuQi}
-                    alt="Peaceful wellness treatment — Traditional Chinese Medicine holistic healing"
-                    width={700}
-                    height={350}
-                    className="w-full h-auto object-cover"
-                    style={{ aspectRatio: "2/1" }}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background: "linear-gradient(to top, var(--color-surface) 0%, transparent 50%)",
-                      opacity: 0.4,
-                    }}
-                  />
-                </div>
-              <div className="card p-6">
-                <div className="flex flex-col gap-4">
-                  {/* User bubble */}
-                  <div className="flex justify-end">
-                    <div
-                      className="max-w-[80%] rounded-[12px] rounded-br-[4px] px-4 py-3"
-                      style={{ backgroundColor: "var(--color-surface)", border: "1px solid var(--color-border)" }}
-                    >
-                      <p className="font-body text-[14px]" style={{ color: "var(--color-text)" }}>
-                        {t("shifuQi.chatUser")}
-                      </p>
-                    </div>
-                  </div>
-                  {/* Bot bubble */}
-                  <div className="flex justify-start">
-                    <div className="max-w-[85%]">
-                      <div className="flex items-center gap-1.5 mb-1.5">
-                        <YinYangSmall />
-                        <span className="font-body text-[12px] font-medium" style={{ color: "var(--color-primary)" }}>
-                          Shifu Qi
-                        </span>
-                      </div>
-                      <div
-                        className="rounded-[12px] rounded-bl-[4px] px-4 py-3"
-                        style={{ backgroundColor: "var(--color-primary)", color: "white" }}
-                      >
-                        <p className="font-body text-[14px] leading-[1.65]">
-                          {t("shifuQi.chatBot")}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* Input mockup */}
-                  <div
-                    className="flex items-center gap-3 px-4 py-3 mt-2"
-                    style={{
-                      border: "1px solid var(--color-border)",
-                      backgroundColor: "var(--color-bg)",
-                      borderRadius: "var(--radius-btn)",
-                    }}
-                  >
-                    <span className="font-body text-[14px] flex-1" style={{ color: "var(--color-text-muted)", opacity: 0.5 }}>
-                      {t("assistant.placeholder")}
-                    </span>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <path d="M3 9h12m0 0l-4-4m4 4l-4 4" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
+              <div>
+                <ShifuChat height="400px" embedded />
+                <p
+                  className="font-body text-[12px] italic text-center mt-3"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
+                  {t("chat.demoNote")}
+                </p>
               </div>
             </ScrollAnimator>
           </div>
