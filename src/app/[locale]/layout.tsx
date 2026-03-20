@@ -81,8 +81,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     url: `${baseUrl}/${locale}`,
     description:
       locale === "de"
-        ? "ShifuHealth – Ihr Portal für Traditionelle Chinesische Medizin. Fundiertes TCM-Wissen, Ernährungstipps und ein KI-Assistent für ganzheitliche Gesundheit."
-        : "ShifuHealth – Your portal for Traditional Chinese Medicine. Evidence-based TCM knowledge, nutrition tips and an AI assistant for holistic health.",
+        ? "ShifuHealth \u2013 Entdecke die Traditionelle Chinesische Medizin (TCM) mit Shifu Qi. Ganzheitliche Empfehlungen zu Ern\u00e4hrung, Heilkr\u00e4utern und Qi-\u00dcbungen."
+        : "ShifuHealth \u2013 Explore Traditional Chinese Medicine (TCM) with Shifu Qi. Holistic guidance on nutrition, healing herbs, acupuncture and Qi practices.",
     inLanguage: locale === "de" ? "de" : "en",
     potentialAction: {
       "@type": "SearchAction",
@@ -97,7 +97,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
         <script

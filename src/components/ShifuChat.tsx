@@ -172,7 +172,7 @@ export default function ShifuChat({
         borderRadius,
         border: "1px solid var(--color-border)",
         backgroundColor: "var(--color-bg)",
-        boxShadow: embedded ? "var(--shadow-card)" : "0 8px 40px rgba(61,43,31,0.15)",
+        boxShadow: embedded ? "var(--shadow-lg)" : "0 8px 40px rgba(34,31,27,0.15)",
       }}
     >
       {/* Header */}

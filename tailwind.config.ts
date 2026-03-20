@@ -11,12 +11,17 @@ const config: Config = {
       colors: {
         bg: "var(--color-bg)",
         surface: "var(--color-surface)",
+        card: "var(--color-card)",
         border: "var(--color-border)",
         primary: "var(--color-primary)",
-        "primary-lt": "var(--color-primary-lt)",
+        "primary-10": "var(--color-primary-10)",
+        "primary-15": "var(--color-primary-15)",
+        "primary-fg": "var(--color-primary-fg)",
         accent: "var(--color-accent)",
         gold: "var(--color-gold)",
         text: "var(--color-text)",
+        "text-body": "var(--color-text-body)",
+        "text-secondary": "var(--color-text-secondary)",
         "text-muted": "var(--color-text-muted)",
       },
       fontFamily: {
@@ -26,9 +31,13 @@ const config: Config = {
       borderRadius: {
         btn: "var(--radius-btn)",
         card: "var(--radius-card)",
+        icon: "var(--radius-icon)",
       },
       boxShadow: {
-        soft: "var(--shadow-soft)",
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        primary: "var(--shadow-primary)",
       },
     },
   },

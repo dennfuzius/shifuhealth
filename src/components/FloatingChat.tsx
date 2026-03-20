@@ -124,7 +124,7 @@ export default function FloatingChat() {
             height: 56,
             borderRadius: "50%",
             backgroundColor: "var(--color-primary)",
-            boxShadow: "0 4px 16px rgba(123, 158, 135, 0.4)",
+            boxShadow: "0 4px 16px rgba(59, 104, 83, 0.4)",
           }}
           aria-label="Shifu Qi Chat"
         >

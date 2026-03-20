@@ -53,28 +53,29 @@ export default function AssistantPage() {
   ];
 
   return (
-    <div style={{ backgroundColor: "var(--color-bg)" }}>
+    <div>
       {/* Hero */}
-      <section className="mx-auto max-w-3xl px-5 pt-16 pb-10 text-center">
-        <h1
-          className="font-body text-[28px] md:text-[42px] font-bold mb-4"
-          style={{ color: "var(--color-text)" }}
-        >
+      <section className="mx-auto max-w-3xl px-6 pt-28 pb-10 text-center">
+        <div
+          className="w-12 h-1 rounded-full mx-auto mb-8"
+          style={{ backgroundColor: "var(--color-primary)" }}
+        />
+        <h1 className="mb-4">
           {t("title")}
         </h1>
         <p
-          className="font-body text-[16px] leading-[1.75] max-w-xl mx-auto"
-          style={{ color: "var(--color-text-muted)" }}
+          className="font-body text-base leading-relaxed max-w-xl mx-auto"
+          style={{ color: "var(--color-text-secondary)" }}
         >
           {t("subtitle")}
         </p>
       </section>
 
       {/* Embedded chat */}
-      <section className="mx-auto max-w-[720px] px-5 pb-6">
+      <section className="mx-auto max-w-[720px] px-6 pb-6">
         <ShifuChat height="600px" embedded />
         <p
-          className="font-body text-[12px] italic text-center mt-3"
+          className="font-body text-xs italic text-center mt-3"
           style={{ color: "var(--color-text-muted)" }}
         >
           {tc("demoNote")}
@@ -82,28 +83,22 @@ export default function AssistantPage() {
       </section>
 
       {/* Info cards */}
-      <section className="mx-auto max-w-4xl px-5 py-16">
-        <div className="grid md:grid-cols-3 gap-6">
+      <section className="mx-auto max-w-4xl px-6 py-24">
+        <div className="grid md:grid-cols-3 gap-8">
           {infoCards.map((card, i) => (
             <div
               key={i}
-              className="card p-6"
+              className="card p-8 hover:shadow-md transition-shadow duration-300"
             >
-              <div
-                className="w-11 h-11 rounded-full flex items-center justify-center mb-4"
-                style={{ backgroundColor: "var(--color-primary-lt)", opacity: 0.85 }}
-              >
+              <div className="icon-container mb-5">
                 {card.icon}
               </div>
-              <h3
-                className="font-body text-[16px] font-medium mb-2"
-                style={{ color: "var(--color-text)" }}
-              >
+              <h3 className="font-heading text-xl font-semibold mb-2">
                 {t(card.titleKey)}
               </h3>
               <p
-                className="font-body text-[14px] leading-[1.7]"
-                style={{ color: "var(--color-text-muted)" }}
+                className="font-body text-sm leading-relaxed"
+                style={{ color: "var(--color-text-secondary)" }}
               >
                 {t(card.textKey)}
               </p>

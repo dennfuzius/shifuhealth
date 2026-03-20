@@ -18,63 +18,75 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 h-16"
       style={{
-        backgroundColor: "var(--color-bg)",
-        borderBottom: "1px solid var(--color-border)",
+        backgroundColor: "rgba(248, 245, 241, 0.8)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        borderBottom: "1px solid rgba(226, 219, 213, 0.5)",
       }}
     >
-      <div className="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-1">
+      <div className="mx-auto max-w-6xl px-6 h-full flex items-center justify-between">
+        <Link href="/" className="flex items-center">
           <span
-            className="font-heading text-[26px] font-medium"
-            style={{ color: "var(--color-text)" }}
+            className="font-heading text-[20px] font-semibold"
+            style={{ color: "var(--color-text-body)", letterSpacing: "-0.5px" }}
           >
             ShifuHealth
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-body text-[13px] font-medium transition-all duration-200 ease-in-out hover:opacity-70"
+              className="font-body text-[14px] transition-colors duration-200 hover:text-[var(--color-text-body)]"
               style={{
-                color: pathname === link.href ? "var(--color-primary)" : "var(--color-text)",
+                color: pathname === link.href ? "var(--color-primary)" : "var(--color-text-muted)",
               }}
             >
               {link.label}
             </Link>
           ))}
           <LanguageSwitcher />
+          <Link
+            href="/assistent"
+            className="font-body text-[14px] font-medium px-5 py-2 rounded-[10px] transition-colors duration-200"
+            style={{
+              backgroundColor: "var(--color-primary)",
+              color: "var(--color-primary-fg)",
+            }}
+          >
+            {t("assistant")}
+          </Link>
         </nav>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-[5px] p-2"
+          className="md:hidden p-2 active:scale-95 transition-transform"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <span
-            className="block w-5 h-[2px] transition-all duration-200"
+            className="block w-5 h-[2px] mb-[5px] transition-all duration-200"
             style={{
-              backgroundColor: "var(--color-text)",
+              backgroundColor: "var(--color-text-body)",
               transform: menuOpen ? "rotate(45deg) translateY(7px)" : "none",
             }}
           />
           <span
-            className="block w-5 h-[2px] transition-all duration-200"
+            className="block w-5 h-[2px] mb-[5px] transition-all duration-200"
             style={{
-              backgroundColor: "var(--color-text)",
+              backgroundColor: "var(--color-text-body)",
               opacity: menuOpen ? 0 : 1,
             }}
           />
           <span
             className="block w-5 h-[2px] transition-all duration-200"
             style={{
-              backgroundColor: "var(--color-text)",
+              backgroundColor: "var(--color-text-body)",
               transform: menuOpen ? "rotate(-45deg) translateY(-7px)" : "none",
             }}
           />
@@ -84,10 +96,11 @@ export default function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <nav
-          className="md:hidden border-t px-5 pb-5 pt-3 flex flex-col gap-4"
+          className="md:hidden px-6 pb-6 pt-4 flex flex-col gap-4"
           style={{
-            backgroundColor: "var(--color-bg)",
-            borderColor: "var(--color-border)",
+            backgroundColor: "rgba(248, 245, 241, 0.95)",
+            backdropFilter: "blur(12px)",
+            borderBottom: "1px solid rgba(226, 219, 213, 0.5)",
           }}
         >
           {links.map((link) => (
@@ -95,16 +108,23 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-body text-[15px] font-medium py-1"
+              className="font-body text-[16px] py-1"
               style={{
-                color: pathname === link.href ? "var(--color-primary)" : "var(--color-text)",
+                color: pathname === link.href ? "var(--color-primary)" : "var(--color-text-muted)",
               }}
             >
               {link.label}
             </Link>
           ))}
-          <div className="pt-2">
+          <div className="pt-2 flex items-center gap-4">
             <LanguageSwitcher />
+            <Link
+              href="/assistent"
+              onClick={() => setMenuOpen(false)}
+              className="btn-primary text-[14px] py-2 px-5"
+            >
+              {t("assistant")}
+            </Link>
           </div>
         </nav>
       )}

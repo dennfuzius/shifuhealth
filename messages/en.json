@@ -87,7 +87,11 @@
     "water": "Water", "waterSymbol": "\u6c34",
     "waterOrgan": "Kidney & Bladder", "waterSeason": "Winter",
     "waterEmotion": "Fear & Willpower", "waterTaste": "Salty",
-    "waterText": "Water is the source of life. It stands for depth, wisdom and the essence of our vitality."
+    "waterText": "Water is the source of life. It stands for depth, wisdom and the essence of our vitality.",
+    "labelOrgan": "Organ",
+    "labelSeason": "Season",
+    "labelEmotion": "Emotion",
+    "labelTaste": "Taste"
   },
   "newsletter": {
     "title": "TCM Wisdom straight to your inbox",

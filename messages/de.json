@@ -87,7 +87,11 @@
     "water": "Wasser", "waterSymbol": "\u6c34",
     "waterOrgan": "Niere & Blase", "waterSeason": "Winter",
     "waterEmotion": "Angst & Willenskraft", "waterTaste": "Salzig",
-    "waterText": "Wasser ist die Quelle des Lebens. Es steht f\u00fcr Tiefe, Weisheit und die Essenz unserer Vitalit\u00e4t."
+    "waterText": "Wasser ist die Quelle des Lebens. Es steht f\u00fcr Tiefe, Weisheit und die Essenz unserer Vitalit\u00e4t.",
+    "labelOrgan": "Organ",
+    "labelSeason": "Jahreszeit",
+    "labelEmotion": "Emotion",
+    "labelTaste": "Geschmack"
   },
   "newsletter": {
     "title": "TCM-Wissen direkt in dein Postfach",
