@@ -1,88 +1,100 @@
 {
   "metadata": {
-    "title": "ShifuHealth – Traditionelle Chinesische Medizin | TCM Blog & KI-Assistent",
-    "description": "Entdecke die Heilkunst der Traditionellen Chinesischen Medizin. TCM-Wissen, Ernährungsempfehlungen, Kräuterkunde und dein persönlicher KI-Assistent Shifu Qi.",
-    "keywords": "Traditionelle Chinesische Medizin, TCM, TCM Blog, Qi, Yin Yang, Fünf Elemente, TCM Ernährung, TCM Kräuter, Akupunktur, TCM Assistent, chinesische Heilkunde, TCM Deutschland"
+    "title": "ShifuHealth – Traditionelle Chinesische Medizin (TCM) | Blog & KI-Assistent Shifu Qi",
+    "description": "Entdecke Traditional Chinese Medicine auf Deutsch. TCM-Ernährung, Heilkräuter, Qi-Übungen und Shifu Qi — dein persönlicher KI-Experte für Traditionelle Chinesische Medizin.",
+    "keywords": "Traditionelle Chinesische Medizin, Traditional Chinese Medicine, TCM, TCM Deutschland, Qi, Yin Yang, Fünf Elemente, TCM Ernährung, TCM Kräuter, Akupunktur, Moxibustion, TCM Diagnose, Zungenbild TCM, Pulsbild TCM, Nieren Yang Mangel, TCM Blog Deutsch, Shifu Qi"
   },
   "nav": {
     "blog": "Blog",
     "assistant": "Shifu Qi",
-    "aboutTcm": "Über TCM",
-    "language": "EN"
+    "aboutTcm": "Über TCM"
+  },
+  "lang": {
+    "current": "DE",
+    "de": "Deutsch",
+    "en": "English"
   },
   "hero": {
-    "title": "Die Weisheit der traditionellen chinesischen Medizin — für dein modernes Leben",
+    "title": "Die Weisheit der Traditionellen Chinesischen Medizin (Traditional Chinese Medicine) — für dein modernes Leben",
     "subtitle": "Entdecke uralte Heilkunst neu. Shifu Qi begleitet dich auf dem Weg zu Gesundheit und Balance.",
     "ctaPrimary": "Shifu Qi fragen",
-    "ctaSecondary": "Blog lesen"
+    "ctaSecondary": "Blog lesen",
+    "trust1": "Kein Arztbesuch nötig",
+    "trust2": "Auf Deutsch & Englisch",
+    "trust3": "KI-gestützt",
+    "seoText": "ShifuHealth verbindet das jahrtausendealte Wissen der Traditionellen Chinesischen Medizin (TCM) mit moderner KI-Technologie. Entdecke TCM-Ernährung, Heilkräuter, Akupunktur und Qi-Übungen — erklärt für das westliche Publikum."
   },
   "trust": {
-    "item1": "Über 2000 Jahre Tradition",
-    "item2": "Westlich erklärt",
-    "item3": "Kostenlos starten"
+    "item1": "Über 2.000 Jahre Heilwissen",
+    "item2": "Sanft. Ganzheitlich. Wirksam.",
+    "item3": "Kostenlos entdecken"
   },
   "tcmIntro": {
     "title": "Was ist Traditionelle Chinesische Medizin?",
     "qi_title": "Qi & Lebensenergie",
     "qi_text": "Qi ist die vitale Lebensenergie, die durch deinen Körper fließt. Wenn Qi frei und ausgeglichen fließt, fühlst du dich gesund und voller Energie. Blockaden können zu Beschwerden führen.",
+    "qi_quote": "\u201EWo Qi flie\u00dft, folgt Gesundheit.\u201C",
     "yinyang_title": "Yin & Yang",
-    "yinyang_text": "Zwei gegensätzliche, aber sich ergänzende Kräfte — wie Ruhe und Aktivität, Kälte und Wärme. Gesundheit entsteht, wenn Yin und Yang im Gleichgewicht sind.",
-    "elements_title": "Die fünf Elemente",
-    "elements_text": "Holz, Feuer, Erde, Metall und Wasser — fünf Wandlungsphasen, die Organe, Emotionen und Jahreszeiten miteinander verbinden."
+    "yinyang_text": "Zwei gegens\u00e4tzliche, aber sich erg\u00e4nzende Kr\u00e4fte \u2014 wie Ruhe und Aktivit\u00e4t, K\u00e4lte und W\u00e4rme. Gesundheit entsteht, wenn Yin und Yang im Gleichgewicht sind.",
+    "yinyang_quote": "\u201EBalance ist kein Zustand \u2014 es ist ein Tanz.\u201C",
+    "elements_title": "Die f\u00fcnf Elemente",
+    "elements_text": "Holz, Feuer, Erde, Metall und Wasser \u2014 f\u00fcnf Wandlungsphasen, die Organe, Emotionen und Jahreszeiten miteinander verbinden.",
+    "elements_quote": "\u201EAlles ist miteinander verbunden.\u201C"
   },
   "shifuQi": {
     "title": "Dein persönlicher TCM-Experte: Shifu Qi",
     "body": "Beschreibe deine Beschwerden — Shifu Qi analysiert sie nach den Prinzipien der TCM und gibt dir fundierte Empfehlungen, zugeschnitten auf dein individuelles Muster.",
     "cta": "Jetzt Shifu Qi fragen",
-    "chatUser": "Ich fühle mich oft müde und habe kalte Hände.",
-    "chatBot": "Nach TCM-Prinzipien könnte das auf einen Qi- und Yang-Mangel hindeuten. Ich empfehle wärmende Lebensmittel wie Ingwer und Zimt..."
+    "bullet1": "Analysiert dein Muster nach TCM-Prinzipien",
+    "bullet2": "Empfiehlt Kräuter, Ernährung & Übungen",
+    "bullet3": "Antwortet auf Deutsch und Englisch",
+    "chatUser": "Ich habe oft kalte Füße und fühle mich erschöpft.",
+    "chatBot": "Nach den Prinzipien der TCM deutet dies auf einen Nieren-Yang-Mangel hin. Ich empfehle wärmende Lebensmittel wie Ingwer, Zimt und Lamm sowie..."
   },
   "blogPreview": {
     "title": "Wissen aus der TCM",
     "allArticles": "Alle Artikel",
     "readMore": "Weiterlesen",
-    "article1Cat": "Grundlagen",
-    "article1Title": "Was ist Qi? Eine Einführung in die Lebensenergie",
-    "article1Excerpt": "Qi ist das Fundament der TCM. Erfahre, wie diese vitale Kraft deinen Körper beeinflusst und wie du sie stärken kannst.",
-    "article2Cat": "Ernährung",
-    "article2Title": "TCM-Ernährung: Essen nach den fünf Elementen",
-    "article2Excerpt": "Lerne, wie du mit der richtigen Ernährung dein inneres Gleichgewicht unterstützt — abgestimmt auf die Jahreszeit.",
-    "article3Cat": "Kräuterkunde",
-    "article3Title": "Die 5 wichtigsten TCM-Kräuter für Einsteiger",
-    "article3Excerpt": "Von Goji-Beeren bis Astragalus: Entdecke die Heilkräuter der TCM und ihre Wirkung auf dein Wohlbefinden."
+    "readTime": "5 min Lesezeit",
+    "article1Cat": "Ernährung",
+    "article1Title": "Wärme von innen: TCM-Ernährung im Winter",
+    "article1Excerpt": "Erfahre, welche Lebensmittel nach der Traditionellen Chinesischen Medizin dein Yang stärken...",
+    "article2Cat": "Kräuter",
+    "article2Title": "Die 5 wichtigsten TCM-Kräuter für den Alltag",
+    "article2Excerpt": "Von Astragalus bis Goji-Beere — diese Heilkräuter der TCM solltest du kennen...",
+    "article3Cat": "Grundlagen",
+    "article3Title": "Qi verstehen: Die Lebensenergie der TCM",
+    "article3Excerpt": "Was ist Qi wirklich? Ein verständlicher Einstieg in das Herzstück der Traditionellen Chinesischen Medizin..."
   },
   "fiveElements": {
     "title": "Die Fünf Elemente der TCM",
-    "wood": "Holz",
-    "woodOrgan": "Leber & Gallenblase",
-    "woodSeason": "Frühling",
-    "woodEmotion": "Wut & Entschlossenheit",
+    "wood": "Holz", "woodSymbol": "木",
+    "woodOrgan": "Leber & Gallenblase", "woodSeason": "Frühling",
+    "woodEmotion": "Wut & Entschlossenheit", "woodTaste": "Sauer",
     "woodText": "Das Element Holz steht für Wachstum und Erneuerung. Es nährt Kreativität und Flexibilität.",
-    "fire": "Feuer",
-    "fireOrgan": "Herz & Dünndarm",
-    "fireSeason": "Sommer",
-    "fireEmotion": "Freude & Begeisterung",
+    "fire": "Feuer", "fireSymbol": "火",
+    "fireOrgan": "Herz & Dünndarm", "fireSeason": "Sommer",
+    "fireEmotion": "Freude & Begeisterung", "fireTaste": "Bitter",
     "fireText": "Feuer repräsentiert Wärme, Liebe und Lebensfreude. Es regiert das Herz und den Geist.",
-    "earth": "Erde",
-    "earthOrgan": "Milz & Magen",
-    "earthSeason": "Spätsommer",
-    "earthEmotion": "Fürsorge & Grübeln",
+    "earth": "Erde", "earthSymbol": "土",
+    "earthOrgan": "Milz & Magen", "earthSeason": "Spätsommer",
+    "earthEmotion": "Fürsorge & Grübeln", "earthTaste": "Süß",
     "earthText": "Die Erde steht für Stabilität und Nährung. Sie ist das Zentrum, das alle Elemente verbindet.",
-    "metal": "Metall",
-    "metalOrgan": "Lunge & Dickdarm",
-    "metalSeason": "Herbst",
-    "metalEmotion": "Trauer & Loslassen",
+    "metal": "Metall", "metalSymbol": "金",
+    "metalOrgan": "Lunge & Dickdarm", "metalSeason": "Herbst",
+    "metalEmotion": "Trauer & Loslassen", "metalTaste": "Scharf",
     "metalText": "Metall steht für Klarheit, Struktur und das Loslassen. Es unterstützt Atmung und Abwehrkraft.",
-    "water": "Wasser",
-    "waterOrgan": "Niere & Blase",
-    "waterSeason": "Winter",
-    "waterEmotion": "Angst & Willenskraft",
+    "water": "Wasser", "waterSymbol": "水",
+    "waterOrgan": "Niere & Blase", "waterSeason": "Winter",
+    "waterEmotion": "Angst & Willenskraft", "waterTaste": "Salzig",
     "waterText": "Wasser ist die Quelle des Lebens. Es steht für Tiefe, Weisheit und die Essenz unserer Vitalität."
   },
   "newsletter": {
     "title": "TCM-Wissen direkt in dein Postfach",
+    "subtitle": "Monatliche TCM-Tipps, saisonale Ernährungsempfehlungen und Heilwissen direkt von Shifu Qi.",
     "placeholder": "Deine E-Mail-Adresse",
-    "cta": "Anmelden"
+    "cta": "Anmelden",
+    "privacy": "Kein Spam. Jederzeit abmeldbar."
   },
   "footer": {
     "tagline": "Dein Wegweiser für ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin.",

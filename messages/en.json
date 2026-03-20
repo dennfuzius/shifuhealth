@@ -1,88 +1,100 @@
 {
   "metadata": {
-    "title": "ShifuHealth – Traditional Chinese Medicine | TCM Blog & AI Assistant",
-    "description": "Explore the healing art of Traditional Chinese Medicine. TCM knowledge, dietary advice, herbal wisdom and your personal AI assistant Shifu Qi.",
-    "keywords": "Traditional Chinese Medicine, TCM, TCM blog, Qi, Yin Yang, Five Elements, TCM diet, TCM herbs, acupuncture, TCM assistant, Chinese healing, holistic health"
+    "title": "ShifuHealth – Traditional Chinese Medicine (TCM) | Blog & AI Assistant Shifu Qi",
+    "description": "Explore Traditional Chinese Medicine in English. TCM nutrition, healing herbs, Qi exercises and Shifu Qi — your personal AI expert for Traditional Chinese Medicine.",
+    "keywords": "Traditional Chinese Medicine, TCM, TCM blog, Qi, Yin Yang, Five Elements, TCM nutrition, TCM herbs, acupuncture, moxibustion, TCM diagnosis, tongue diagnosis TCM, pulse diagnosis TCM, Kidney Yang deficiency, holistic health, Shifu Qi"
   },
   "nav": {
     "blog": "Blog",
     "assistant": "Shifu Qi",
-    "aboutTcm": "About TCM",
-    "language": "DE"
+    "aboutTcm": "About TCM"
+  },
+  "lang": {
+    "current": "EN",
+    "de": "Deutsch",
+    "en": "English"
   },
   "hero": {
     "title": "The Wisdom of Traditional Chinese Medicine — for your modern life",
     "subtitle": "Rediscover ancient healing. Shifu Qi guides you on your path to health and balance.",
     "ctaPrimary": "Ask Shifu Qi",
-    "ctaSecondary": "Read the Blog"
+    "ctaSecondary": "Read the Blog",
+    "trust1": "No doctor visit needed",
+    "trust2": "In German & English",
+    "trust3": "AI-powered",
+    "seoText": "ShifuHealth combines thousands of years of Traditional Chinese Medicine (TCM) with modern AI technology. Discover TCM nutrition, healing herbs, acupuncture and Qi exercises — explained for a western audience."
   },
   "trust": {
-    "item1": "Over 2000 Years of Tradition",
-    "item2": "Explained for the West",
-    "item3": "Start for Free"
+    "item1": "Over 2,000 Years of Healing",
+    "item2": "Gentle. Holistic. Effective.",
+    "item3": "Start Exploring for Free"
   },
   "tcmIntro": {
     "title": "What is Traditional Chinese Medicine?",
     "qi_title": "Qi & Life Energy",
     "qi_text": "Qi is the vital life energy that flows through your body. When Qi flows freely and in balance, you feel healthy and full of vitality. Blockages can lead to discomfort.",
+    "qi_quote": "\"Where Qi flows, health follows.\"",
     "yinyang_title": "Yin & Yang",
     "yinyang_text": "Two opposing yet complementary forces — like rest and activity, cold and warmth. Health arises when Yin and Yang are in balance.",
+    "yinyang_quote": "\"Balance is not a state — it is a dance.\"",
     "elements_title": "The Five Elements",
-    "elements_text": "Wood, Fire, Earth, Metal and Water — five transformation phases that connect organs, emotions and seasons."
+    "elements_text": "Wood, Fire, Earth, Metal and Water — five transformation phases that connect organs, emotions and seasons.",
+    "elements_quote": "\"Everything is interconnected.\""
   },
   "shifuQi": {
     "title": "Your Personal TCM Expert: Shifu Qi",
     "body": "Describe your symptoms — Shifu Qi analyses them according to TCM principles and gives you grounded recommendations tailored to your individual pattern.",
     "cta": "Ask Shifu Qi now",
-    "chatUser": "I often feel tired and my hands are always cold.",
-    "chatBot": "Based on TCM principles, this could indicate a Qi and Yang deficiency. I recommend warming foods like ginger and cinnamon..."
+    "bullet1": "Analyses your pattern using TCM principles",
+    "bullet2": "Recommends herbs, diet & exercises",
+    "bullet3": "Responds in German and English",
+    "chatUser": "I often have cold feet and feel exhausted.",
+    "chatBot": "Based on TCM principles, this could indicate a Kidney Yang deficiency. I recommend warming foods like ginger, cinnamon and lamb as well as..."
   },
   "blogPreview": {
     "title": "Knowledge from TCM",
     "allArticles": "All articles",
     "readMore": "Read more",
-    "article1Cat": "Fundamentals",
-    "article1Title": "What is Qi? An Introduction to Life Energy",
-    "article1Excerpt": "Qi is the foundation of TCM. Learn how this vital force affects your body and how you can strengthen it.",
-    "article2Cat": "Nutrition",
-    "article2Title": "TCM Nutrition: Eating by the Five Elements",
-    "article2Excerpt": "Learn how to support your inner balance with the right diet — adapted to the season.",
-    "article3Cat": "Herbal Medicine",
-    "article3Title": "The 5 Most Important TCM Herbs for Beginners",
-    "article3Excerpt": "From goji berries to astragalus: discover TCM healing herbs and their effects on your wellbeing."
+    "readTime": "5 min read",
+    "article1Cat": "Nutrition",
+    "article1Title": "Warmth from Within: TCM Nutrition in Winter",
+    "article1Excerpt": "Discover which foods strengthen your Yang according to Traditional Chinese Medicine...",
+    "article2Cat": "Herbs",
+    "article2Title": "The 5 Most Important TCM Herbs for Daily Life",
+    "article2Excerpt": "From Astragalus to Goji Berry — these TCM healing herbs are worth knowing...",
+    "article3Cat": "Basics",
+    "article3Title": "Understanding Qi: The Life Energy of TCM",
+    "article3Excerpt": "What is Qi really? An accessible introduction to the heart of Traditional Chinese Medicine..."
   },
   "fiveElements": {
     "title": "The Five Elements of TCM",
-    "wood": "Wood",
-    "woodOrgan": "Liver & Gallbladder",
-    "woodSeason": "Spring",
-    "woodEmotion": "Anger & Determination",
+    "wood": "Wood", "woodSymbol": "木",
+    "woodOrgan": "Liver & Gallbladder", "woodSeason": "Spring",
+    "woodEmotion": "Anger & Determination", "woodTaste": "Sour",
     "woodText": "The Wood element represents growth and renewal. It nourishes creativity and flexibility.",
-    "fire": "Fire",
-    "fireOrgan": "Heart & Small Intestine",
-    "fireSeason": "Summer",
-    "fireEmotion": "Joy & Enthusiasm",
+    "fire": "Fire", "fireSymbol": "火",
+    "fireOrgan": "Heart & Small Intestine", "fireSeason": "Summer",
+    "fireEmotion": "Joy & Enthusiasm", "fireTaste": "Bitter",
     "fireText": "Fire represents warmth, love and the joy of life. It governs the heart and the spirit.",
-    "earth": "Earth",
-    "earthOrgan": "Spleen & Stomach",
-    "earthSeason": "Late Summer",
-    "earthEmotion": "Care & Overthinking",
+    "earth": "Earth", "earthSymbol": "土",
+    "earthOrgan": "Spleen & Stomach", "earthSeason": "Late Summer",
+    "earthEmotion": "Care & Overthinking", "earthTaste": "Sweet",
     "earthText": "Earth stands for stability and nourishment. It is the centre that connects all elements.",
-    "metal": "Metal",
-    "metalOrgan": "Lung & Large Intestine",
-    "metalSeason": "Autumn",
-    "metalEmotion": "Grief & Letting Go",
+    "metal": "Metal", "metalSymbol": "金",
+    "metalOrgan": "Lung & Large Intestine", "metalSeason": "Autumn",
+    "metalEmotion": "Grief & Letting Go", "metalTaste": "Pungent",
     "metalText": "Metal stands for clarity, structure and letting go. It supports breathing and the immune system.",
-    "water": "Water",
-    "waterOrgan": "Kidney & Bladder",
-    "waterSeason": "Winter",
-    "waterEmotion": "Fear & Willpower",
+    "water": "Water", "waterSymbol": "水",
+    "waterOrgan": "Kidney & Bladder", "waterSeason": "Winter",
+    "waterEmotion": "Fear & Willpower", "waterTaste": "Salty",
     "waterText": "Water is the source of life. It stands for depth, wisdom and the essence of our vitality."
   },
   "newsletter": {
     "title": "TCM Wisdom straight to your inbox",
+    "subtitle": "Monthly TCM tips, seasonal nutrition advice and healing wisdom from Shifu Qi.",
     "placeholder": "Your email address",
-    "cta": "Subscribe"
+    "cta": "Subscribe",
+    "privacy": "No spam. Unsubscribe anytime."
   },
   "footer": {
     "tagline": "Your guide to holistic health through Traditional Chinese Medicine.",

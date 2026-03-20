@@ -22,7 +22,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
   const t = await getTranslations({ locale, namespace: "metadata" });
-  const baseUrl = "https://shifuhealth.com";
+  const baseUrl = "https://www.shifuhealth.com";
 
   return {
     title: {
@@ -42,6 +42,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("title"),
       description: t("description"),
+      url: `${baseUrl}/${locale}`,
       siteName: "ShifuHealth",
       locale: locale === "de" ? "de_DE" : "en_US",
       type: "website",
@@ -70,6 +71,24 @@ export async function generateMetadata({
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = params;
   const messages = await getMessages();
+  const baseUrl = "https://www.shifuhealth.com";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ShifuHealth",
+    url: `${baseUrl}/${locale}`,
+    description:
+      locale === "de"
+        ? "ShifuHealth – Ihr Portal für Traditionelle Chinesische Medizin. Fundiertes TCM-Wissen, Ernährungstipps und ein KI-Assistent für ganzheitliche Gesundheit."
+        : "ShifuHealth – Your portal for Traditional Chinese Medicine. Evidence-based TCM knowledge, nutrition tips and an AI assistant for holistic health.",
+    inLanguage: locale === "de" ? "de" : "en",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${baseUrl}/${locale}/blog?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
 
   return (
     <html lang={locale}>
@@ -79,6 +98,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-bg)" }}>

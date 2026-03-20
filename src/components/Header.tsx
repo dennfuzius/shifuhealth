@@ -1,13 +1,11 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const t = useTranslations("nav");
-  const locale = useLocale();
-  const pathname = usePathname();
-  const otherLocale = locale === "de" ? "en" : "de";
 
   const linkStyle =
     "font-body text-[13px] font-medium transition-all duration-200 ease-in-out hover:opacity-70";
@@ -31,38 +29,16 @@ export default function Header() {
         </Link>
 
         <nav className="flex items-center gap-7">
-          <Link
-            href="/blog"
-            className={linkStyle}
-            style={{ color: "var(--color-text)" }}
-          >
+          <Link href="/blog" className={linkStyle} style={{ color: "var(--color-text)" }}>
             {t("blog")}
           </Link>
-          <Link
-            href="/assistent"
-            className={linkStyle}
-            style={{ color: "var(--color-text)" }}
-          >
+          <Link href="/assistent" className={linkStyle} style={{ color: "var(--color-text)" }}>
             {t("assistant")}
           </Link>
-          <Link
-            href="/ueber-tcm"
-            className={linkStyle}
-            style={{ color: "var(--color-text)" }}
-          >
+          <Link href="/ueber-tcm" className={linkStyle} style={{ color: "var(--color-text)" }}>
             {t("aboutTcm")}
           </Link>
-          <Link
-            href={pathname as "/"}
-            locale={otherLocale}
-            className="font-body text-[13px] font-medium px-3 py-1 rounded-btn transition-all duration-200 ease-in-out"
-            style={{
-              color: "var(--color-text-muted)",
-              border: "1px solid var(--color-border)",
-            }}
-          >
-            {t("language")}
-          </Link>
+          <LanguageSwitcher />
         </nav>
       </div>
     </header>
