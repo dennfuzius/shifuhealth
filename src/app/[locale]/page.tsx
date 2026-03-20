@@ -2,35 +2,23 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
-/* ── SVG Decorations ───────────────────────────────────── */
+/* ── Unsplash images ─────────────────────────────────── */
 
-function BotanicalHero() {
-  return (
-    <svg
-      className="absolute right-[-60px] top-1/2 -translate-y-1/2 pointer-events-none"
-      width="500" height="500" viewBox="0 0 500 500" fill="none"
-      style={{ opacity: 0.07 }}
-    >
-      <circle cx="250" cy="250" r="230" stroke="var(--color-accent)" strokeWidth="0.8" />
-      <circle cx="250" cy="250" r="180" stroke="var(--color-accent)" strokeWidth="0.6" />
-      <circle cx="250" cy="250" r="130" stroke="var(--color-accent)" strokeWidth="0.4" />
-      <path d="M250 20c0 70-50 120-50 190s50 120 50 50" stroke="var(--color-accent)" strokeWidth="1" />
-      <path d="M250 20c0 70 50 120 50 190s-50 120-50 50" stroke="var(--color-accent)" strokeWidth="1" />
-      <path d="M90 150c60 35 95 70 160 100" stroke="var(--color-accent)" strokeWidth="0.8" />
-      <path d="M410 150c-60 35-95 70-160 100" stroke="var(--color-accent)" strokeWidth="0.8" />
-      <path d="M120 380c50-25 85-60 130-85" stroke="var(--color-accent)" strokeWidth="0.8" />
-      <path d="M380 380c-50-25-85-60-130-85" stroke="var(--color-accent)" strokeWidth="0.8" />
-      {/* Leaf details */}
-      <ellipse cx="200" cy="160" rx="30" ry="15" transform="rotate(-30 200 160)" stroke="var(--color-accent)" strokeWidth="0.6" />
-      <ellipse cx="300" cy="160" rx="30" ry="15" transform="rotate(30 300 160)" stroke="var(--color-accent)" strokeWidth="0.6" />
-      <ellipse cx="180" cy="320" rx="25" ry="12" transform="rotate(20 180 320)" stroke="var(--color-accent)" strokeWidth="0.6" />
-      <ellipse cx="320" cy="320" rx="25" ry="12" transform="rotate(-20 320 320)" stroke="var(--color-accent)" strokeWidth="0.6" />
-    </svg>
-  );
-}
+const images = {
+  hero: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+  shifuQi: "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=700&q=80",
+  blog1: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
+  blog2: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=600&q=80",
+  blog3: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80",
+} as const;
+
+const blogImages = [images.blog1, images.blog2, images.blog3];
+
+/* ── SVG Decorations ───────────────────────────────────── */
 
 function DotGrid() {
   return (
@@ -158,47 +146,80 @@ export default function HomePage() {
         }}
       >
         <DotGrid />
-        <BotanicalHero />
         <div className="relative mx-auto max-w-6xl px-5 py-20 md:py-0 w-full">
-          <div className="max-w-2xl animate-fade-in-up">
-            {/* Gold accent line */}
-            <div className="mb-6" style={{ width: 60, height: 2, backgroundColor: "var(--color-gold)" }} />
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Left: Text */}
+            <div className="max-w-2xl animate-fade-in-up">
+              {/* Gold accent line */}
+              <div className="mb-6" style={{ width: 60, height: 2, backgroundColor: "var(--color-gold)" }} />
 
-            <h1
-              className="font-body text-[32px] md:text-[52px] font-bold leading-[1.15] mb-6"
-              style={{ color: "var(--color-text)" }}
-            >
-              {t("hero.title")}
-            </h1>
-            <p
-              className="font-body text-[16px] leading-[1.75] mb-6 max-w-lg"
-              style={{ color: "var(--color-text-muted)" }}
-            >
-              {t("hero.subtitle")}
-            </p>
+              <h1
+                className="font-body text-[32px] md:text-[52px] font-bold leading-[1.15] mb-6"
+                style={{ color: "var(--color-text)" }}
+              >
+                {t("hero.title")}
+              </h1>
+              <p
+                className="font-body text-[16px] leading-[1.75] mb-6 max-w-lg"
+                style={{ color: "var(--color-text-muted)" }}
+              >
+                {t("hero.subtitle")}
+              </p>
 
-            {/* Inline trust signals */}
-            <div className="flex flex-wrap gap-x-5 gap-y-2 mb-8">
-              {[t("hero.trust1"), t("hero.trust2"), t("hero.trust3")].map((item, i) => (
-                <span key={i} className="font-body text-[13px] font-medium" style={{ color: "var(--color-primary)" }}>
-                  &#10003; {item}
-                </span>
-              ))}
+              {/* Inline trust signals */}
+              <div className="flex flex-wrap gap-x-5 gap-y-2 mb-8">
+                {[t("hero.trust1"), t("hero.trust2"), t("hero.trust3")].map((item, i) => (
+                  <span key={i} className="font-body text-[13px] font-medium" style={{ color: "var(--color-primary)" }}>
+                    &#10003; {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <Link href="/assistent" className="btn-primary">
+                  {t("hero.ctaPrimary")}
+                </Link>
+                <Link href="/blog" className="btn-secondary">
+                  {t("hero.ctaSecondary")}
+                </Link>
+              </div>
+
+              {/* SEO paragraph */}
+              <p className="font-body text-[13px] leading-[1.75] max-w-lg" style={{ color: "var(--color-text-muted)" }}>
+                {t("hero.seoText")}
+              </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Link href="/assistent" className="btn-primary">
-                {t("hero.ctaPrimary")}
-              </Link>
-              <Link href="/blog" className="btn-secondary">
-                {t("hero.ctaSecondary")}
-              </Link>
+            {/* Right: Hero image */}
+            <div className="relative hidden md:block">
+              <div
+                className="absolute -inset-6 rounded-full pointer-events-none"
+                style={{
+                  background: "radial-gradient(circle, var(--color-primary-lt) 0%, transparent 70%)",
+                  opacity: 0.12,
+                }}
+              />
+              <div className="relative overflow-hidden" style={{ borderRadius: "var(--radius-card)" }}>
+                <Image
+                  src={images.hero}
+                  alt="Traditional Chinese Medicine — herbal tea ceremony with natural healing herbs"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  style={{ aspectRatio: "4/3" }}
+                  priority
+                  sizes="(max-width: 768px) 0vw, 50vw"
+                />
+                {/* Soft overlay to blend with site palette */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(135deg, var(--color-surface) 0%, transparent 40%)",
+                    opacity: 0.3,
+                  }}
+                />
+              </div>
             </div>
-
-            {/* SEO paragraph */}
-            <p className="font-body text-[13px] leading-[1.75] max-w-lg" style={{ color: "var(--color-text-muted)" }}>
-              {t("hero.seoText")}
-            </p>
           </div>
         </div>
       </section>
@@ -315,8 +336,28 @@ export default function HomePage() {
               </div>
             </ScrollAnimator>
 
-            {/* Right: Chat mockup */}
+            {/* Right: Image + Chat mockup */}
             <ScrollAnimator>
+              <div className="flex flex-col gap-6">
+                {/* Wellness image */}
+                <div className="relative overflow-hidden" style={{ borderRadius: "var(--radius-card)" }}>
+                  <Image
+                    src={images.shifuQi}
+                    alt="Peaceful wellness treatment — Traditional Chinese Medicine holistic healing"
+                    width={700}
+                    height={350}
+                    className="w-full h-auto object-cover"
+                    style={{ aspectRatio: "2/1" }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: "linear-gradient(to top, var(--color-surface) 0%, transparent 50%)",
+                      opacity: 0.4,
+                    }}
+                  />
+                </div>
               <div className="card p-6">
                 <div className="flex flex-col gap-4">
                   {/* User bubble */}
@@ -367,6 +408,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+              </div>
             </ScrollAnimator>
           </div>
         </div>
@@ -392,7 +434,21 @@ export default function HomePage() {
                     borderTop: "3px solid var(--color-primary)",
                   }}
                 >
-                  <div className="h-40" style={{ backgroundColor: "var(--color-surface)" }} />
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={blogImages[n - 1]}
+                      alt={
+                        n === 1
+                          ? "Warming ginger tea — TCM winter nutrition"
+                          : n === 2
+                            ? "Traditional Chinese Medicine healing herbs and spices"
+                            : "Meditation and Qi energy practice in nature"
+                      }
+                      fill
+                      className="object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-body text-[12px] font-medium uppercase tracking-wider" style={{ color: "var(--color-primary-lt)" }}>
