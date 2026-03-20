@@ -8,7 +8,15 @@
       "Bash(git commit:*)",
       "Bash(brew install:*)",
       "Bash(gh auth:*)",
-      "Bash(grep -l \"color-bg\" .next/static/css/*.css)"
+      "Bash(grep -l \"color-bg\" .next/static/css/*.css)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s http://localhost:3099/de)",
+      "Bash(curl -s http://localhost:3099/_next/static/css/76e398b48dc9c747.css)",
+      "Bash(curl -s http://localhost:3099/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} redirect:%{redirect_url}\" http://localhost:3099/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3099/de)",
+      "Bash(curl -sI http://localhost:3099/)",
+      "Bash(pkill -f 'next start')"
     ]
   }
 }
