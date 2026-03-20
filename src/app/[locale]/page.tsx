@@ -223,7 +223,7 @@ export default function HomePage() {
         className="section-surface"
         style={{ borderBottom: "2px solid var(--color-gold)" }}
       >
-        <div className="mx-auto max-w-6xl px-5" style={{ padding: "40px 20px" }}>
+        <div className="mx-auto max-w-6xl px-5 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
               { icon: <IconClock />, text: t("trust.item1") },
@@ -245,7 +245,7 @@ export default function HomePage() {
       <span className="section-divider" />
 
       {/* ═══ SECTION 3: WHAT IS TCM ═══ */}
-      <section className="section-bg relative overflow-hidden" style={{ padding: "100px 0" }}>
+      <section className="section-bg relative overflow-hidden py-16 md:py-24">
         <WaveTexture />
         <div className="relative mx-auto max-w-6xl px-5">
           <ScrollAnimator>
@@ -288,7 +288,7 @@ export default function HomePage() {
       <span className="section-divider" />
 
       {/* ═══ SECTION 4: SHIFU QI ═══ */}
-      <section className="section-surface relative" style={{ padding: "100px 0" }}>
+      <section className="section-surface relative py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Text */}
@@ -346,7 +346,7 @@ export default function HomePage() {
       <span className="section-divider" />
 
       {/* ═══ SECTION 5: BLOG PREVIEW ═══ */}
-      <section className="section-bg" style={{ padding: "100px 0" }}>
+      <section className="section-bg py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5">
           <ScrollAnimator>
             <h2 className="font-body text-[28px] font-bold text-center mb-14" style={{ color: "var(--color-text)" }}>
@@ -412,7 +412,7 @@ export default function HomePage() {
       <span className="section-divider" />
 
       {/* ═══ SECTION 6: FIVE ELEMENTS ═══ */}
-      <section className="section-surface" style={{ padding: "100px 0" }}>
+      <section className="section-surface py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5">
           <ScrollAnimator>
             <h2 className="font-body text-[28px] font-bold text-center mb-14" style={{ color: "var(--color-text)" }}>
@@ -464,7 +464,7 @@ export default function HomePage() {
       <span className="section-divider" />
 
       {/* ═══ SECTION 7: NEWSLETTER ═══ */}
-      <section style={{ backgroundColor: "var(--color-primary)", padding: "80px 0" }}>
+      <section className="py-16 md:py-24" style={{ backgroundColor: "var(--color-primary)" }}>
         <div className="mx-auto max-w-3xl px-5 text-center">
           <h2 className="font-body text-[28px] font-bold text-white mb-3">
             {t("newsletter.title")}

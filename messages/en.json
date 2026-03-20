@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "ShifuHealth – Traditional Chinese Medicine (TCM) | Blog & AI Assistant Shifu Qi",
-    "description": "Explore Traditional Chinese Medicine in English. TCM nutrition, healing herbs, Qi exercises and Shifu Qi — your personal AI expert for Traditional Chinese Medicine.",
+    "title": "ShifuHealth \u2013 Traditional Chinese Medicine | Healing Wisdom by Shifu Qi",
+    "description": "Explore Traditional Chinese Medicine (TCM) with Shifu Qi \u2013 your personal TCM expert. Get holistic guidance on nutrition, healing herbs, acupuncture and Qi practices.",
     "keywords": "Traditional Chinese Medicine, TCM, TCM blog, Qi, Yin Yang, Five Elements, TCM nutrition, TCM herbs, acupuncture, moxibustion, TCM diagnosis, tongue diagnosis TCM, pulse diagnosis TCM, Kidney Yang deficiency, holistic health, Shifu Qi"
   },
   "nav": {
@@ -15,14 +15,14 @@
     "en": "English"
   },
   "hero": {
-    "title": "The Wisdom of Traditional Chinese Medicine — for your modern life",
+    "title": "The Wisdom of Traditional Chinese Medicine \u2014 for your modern life",
     "subtitle": "Rediscover ancient healing. Shifu Qi guides you on your path to health and balance.",
     "ctaPrimary": "Ask Shifu Qi",
     "ctaSecondary": "Read the Blog",
     "trust1": "No doctor visit needed",
     "trust2": "In German & English",
-    "trust3": "AI-powered",
-    "seoText": "ShifuHealth combines thousands of years of Traditional Chinese Medicine (TCM) with modern AI technology. Discover TCM nutrition, healing herbs, acupuncture and Qi exercises — explained for a western audience."
+    "trust3": "Guided by Shifu Qi, TCM Master",
+    "seoText": "ShifuHealth combines thousands of years of Traditional Chinese Medicine (TCM) \u2013 an ancient healing system with over 2,500 years of history \u2013 with the deep expertise of Shifu Qi."
   },
   "trust": {
     "item1": "Over 2,000 Years of Healing",
@@ -35,15 +35,15 @@
     "qi_text": "Qi is the vital life energy that flows through your body. When Qi flows freely and in balance, you feel healthy and full of vitality. Blockages can lead to discomfort.",
     "qi_quote": "\"Where Qi flows, health follows.\"",
     "yinyang_title": "Yin & Yang",
-    "yinyang_text": "Two opposing yet complementary forces — like rest and activity, cold and warmth. Health arises when Yin and Yang are in balance.",
-    "yinyang_quote": "\"Balance is not a state — it is a dance.\"",
+    "yinyang_text": "Two opposing yet complementary forces \u2014 like rest and activity, cold and warmth. Health arises when Yin and Yang are in balance.",
+    "yinyang_quote": "\"Balance is not a state \u2014 it is a dance.\"",
     "elements_title": "The Five Elements",
-    "elements_text": "Wood, Fire, Earth, Metal and Water — five transformation phases that connect organs, emotions and seasons.",
+    "elements_text": "Wood, Fire, Earth, Metal and Water \u2014 five transformation phases that connect organs, emotions and seasons.",
     "elements_quote": "\"Everything is interconnected.\""
   },
   "shifuQi": {
     "title": "Your Personal TCM Expert: Shifu Qi",
-    "body": "Describe your symptoms — Shifu Qi analyses them according to TCM principles and gives you grounded recommendations tailored to your individual pattern.",
+    "body": "Describe your symptoms \u2014 Shifu Qi analyses them according to TCM principles and gives you grounded recommendations tailored to your individual pattern.",
     "cta": "Ask Shifu Qi now",
     "bullet1": "Analyses your pattern using TCM principles",
     "bullet2": "Recommends herbs, diet & exercises",
@@ -61,30 +61,30 @@
     "article1Excerpt": "Discover which foods strengthen your Yang according to Traditional Chinese Medicine...",
     "article2Cat": "Herbs",
     "article2Title": "The 5 Most Important TCM Herbs for Daily Life",
-    "article2Excerpt": "From Astragalus to Goji Berry — these TCM healing herbs are worth knowing...",
+    "article2Excerpt": "From Astragalus to Goji Berry \u2014 these TCM healing herbs are worth knowing...",
     "article3Cat": "Basics",
     "article3Title": "Understanding Qi: The Life Energy of TCM",
     "article3Excerpt": "What is Qi really? An accessible introduction to the heart of Traditional Chinese Medicine..."
   },
   "fiveElements": {
     "title": "The Five Elements of TCM",
-    "wood": "Wood", "woodSymbol": "木",
+    "wood": "Wood", "woodSymbol": "\u6728",
     "woodOrgan": "Liver & Gallbladder", "woodSeason": "Spring",
     "woodEmotion": "Anger & Determination", "woodTaste": "Sour",
     "woodText": "The Wood element represents growth and renewal. It nourishes creativity and flexibility.",
-    "fire": "Fire", "fireSymbol": "火",
+    "fire": "Fire", "fireSymbol": "\u706b",
     "fireOrgan": "Heart & Small Intestine", "fireSeason": "Summer",
     "fireEmotion": "Joy & Enthusiasm", "fireTaste": "Bitter",
     "fireText": "Fire represents warmth, love and the joy of life. It governs the heart and the spirit.",
-    "earth": "Earth", "earthSymbol": "土",
+    "earth": "Earth", "earthSymbol": "\u571f",
     "earthOrgan": "Spleen & Stomach", "earthSeason": "Late Summer",
     "earthEmotion": "Care & Overthinking", "earthTaste": "Sweet",
     "earthText": "Earth stands for stability and nourishment. It is the centre that connects all elements.",
-    "metal": "Metal", "metalSymbol": "金",
+    "metal": "Metal", "metalSymbol": "\u91d1",
     "metalOrgan": "Lung & Large Intestine", "metalSeason": "Autumn",
     "metalEmotion": "Grief & Letting Go", "metalTaste": "Pungent",
     "metalText": "Metal stands for clarity, structure and letting go. It supports breathing and the immune system.",
-    "water": "Water", "waterSymbol": "水",
+    "water": "Water", "waterSymbol": "\u6c34",
     "waterOrgan": "Kidney & Bladder", "waterSeason": "Winter",
     "waterEmotion": "Fear & Willpower", "waterTaste": "Salty",
     "waterText": "Water is the source of life. It stands for depth, wisdom and the essence of our vitality."
@@ -101,7 +101,7 @@
     "blog": "Blog",
     "assistant": "Shifu Qi",
     "aboutTcm": "About TCM",
-    "disclaimer": "© 2025 ShifuHealth · Not a substitute for medical advice"
+    "disclaimer": "\u00a9 2025 ShifuHealth \u00b7 Not a substitute for medical advice"
   },
   "blog": {
     "title": "Blog",
@@ -111,13 +111,13 @@
     "publishedAt": "Published on"
   },
   "assistant": {
-    "title": "Shifu Qi — Your TCM Expert",
+    "title": "Shifu Qi \u2014 Your TCM Expert",
     "subtitle": "Describe your symptoms. Shifu Qi explains them using Traditional Chinese Medicine principles and gives you grounded recommendations.",
     "placeholder": "Ask your question...",
-    "metaTitle": "Shifu Qi – AI Assistant for Traditional Chinese Medicine | ShifuHealth",
-    "metaDescription": "Ask Shifu Qi — your personal AI expert for TCM. Get grounded recommendations on nutrition, herbs and lifestyle according to Traditional Chinese Medicine principles.",
+    "metaTitle": "Shifu Qi \u2013 Your TCM Expert for Traditional Chinese Medicine | ShifuHealth",
+    "metaDescription": "Ask Shifu Qi \u2014 your personal TCM expert. Get grounded recommendations on nutrition, herbs and lifestyle according to Traditional Chinese Medicine principles.",
     "infoCard1Title": "How does Shifu Qi work?",
-    "infoCard1Text": "Shifu Qi uses an extensive TCM knowledge base and explains your symptoms according to Traditional Chinese Medicine principles — clearly and with depth.",
+    "infoCard1Text": "Shifu Qi uses an extensive TCM knowledge base and explains your symptoms according to Traditional Chinese Medicine principles \u2014 clearly and with depth.",
     "infoCard2Title": "Is this real medical advice?",
     "infoCard2Text": "No. Shifu Qi provides TCM knowledge for orientation but does not replace a doctor visit. For serious conditions, we recommend a qualified TCM practitioner.",
     "infoCard3Title": "Which languages?",
@@ -125,11 +125,11 @@
   },
   "chat": {
     "label": "Ask Shifu Qi",
-    "online": "TCM Expert · Online",
-    "welcome": "Welcome. I am Shifu Qi — your personal TCM companion. Describe your symptoms and I will explain them from the perspective of Traditional Chinese Medicine.",
+    "online": "TCM Expert \u00b7 Online",
+    "welcome": "Welcome. I am Shifu Qi \u2014 your personal TCM companion. Describe your symptoms and I will explain them from the perspective of Traditional Chinese Medicine.",
     "inputPlaceholder": "Write to Shifu Qi...",
-    "disclaimer": "☯ Not a substitute for medical advice",
-    "demoNote": "✦ Demo — Real AI integration coming soon",
+    "disclaimer": "\u262f Not a substitute for medical advice",
+    "demoNote": "\u2726 Shifu Qi is coming soon",
     "chip1": "Stomach pain",
     "chip2": "Sleep issues",
     "chip3": "Fatigue",

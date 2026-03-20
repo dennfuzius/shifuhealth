@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "title": "ShifuHealth – Traditionelle Chinesische Medizin (TCM) | Blog & KI-Assistent Shifu Qi",
-    "description": "Entdecke Traditional Chinese Medicine auf Deutsch. TCM-Ernährung, Heilkräuter, Qi-Übungen und Shifu Qi — dein persönlicher KI-Experte für Traditionelle Chinesische Medizin.",
-    "keywords": "Traditionelle Chinesische Medizin, Traditional Chinese Medicine, TCM, TCM Deutschland, Qi, Yin Yang, Fünf Elemente, TCM Ernährung, TCM Kräuter, Akupunktur, Moxibustion, TCM Diagnose, Zungenbild TCM, Pulsbild TCM, Nieren Yang Mangel, TCM Blog Deutsch, Shifu Qi"
+    "title": "ShifuHealth \u2013 Traditionelle Chinesische Medizin | Heilwissen von Shifu Qi",
+    "description": "Entdecke die Traditionelle Chinesische Medizin (TCM) mit Shifu Qi \u2013 deinem pers\u00f6nlichen TCM-Experten. Erhalte ganzheitliche Empfehlungen zu Ern\u00e4hrung, Heilkr\u00e4utern, Akupunktur und Qi-\u00dcbungen.",
+    "keywords": "Traditionelle Chinesische Medizin, Traditional Chinese Medicine, TCM, TCM Deutschland, Qi, Yin Yang, F\u00fcnf Elemente, TCM Ern\u00e4hrung, TCM Kr\u00e4uter, Akupunktur, Moxibustion, TCM Diagnose, Zungenbild TCM, Pulsbild TCM, Nieren Yang Mangel, TCM Blog Deutsch, Shifu Qi"
   },
   "nav": {
     "blog": "Blog",
     "assistant": "Shifu Qi",
-    "aboutTcm": "Über TCM"
+    "aboutTcm": "\u00dcber TCM"
   },
   "lang": {
     "current": "DE",
@@ -15,24 +15,24 @@
     "en": "English"
   },
   "hero": {
-    "title": "Die Weisheit der Traditionellen Chinesischen Medizin (Traditional Chinese Medicine) — für dein modernes Leben",
+    "title": "Die Weisheit der Traditionellen Chinesischen Medizin \u2014 f\u00fcr dein modernes Leben",
     "subtitle": "Entdecke uralte Heilkunst neu. Shifu Qi begleitet dich auf dem Weg zu Gesundheit und Balance.",
     "ctaPrimary": "Shifu Qi fragen",
     "ctaSecondary": "Blog lesen",
-    "trust1": "Kein Arztbesuch nötig",
+    "trust1": "Kein Arztbesuch n\u00f6tig",
     "trust2": "Auf Deutsch & Englisch",
-    "trust3": "KI-gestützt",
-    "seoText": "ShifuHealth verbindet das jahrtausendealte Wissen der Traditionellen Chinesischen Medizin (TCM) mit moderner KI-Technologie. Entdecke TCM-Ernährung, Heilkräuter, Akupunktur und Qi-Übungen — erklärt für das westliche Publikum."
+    "trust3": "Gef\u00fchrt von Shifu Qi, TCM-Meister",
+    "seoText": "ShifuHealth vereint das jahrtausendealte Wissen der Traditionellen Chinesischen Medizin (TCM) \u2013 ein \u00fcber 2.500 Jahre altes Heilsystem aus China \u2013 mit dem tiefen Erfahrungsschatz von Shifu Qi."
   },
   "trust": {
-    "item1": "Über 2.000 Jahre Heilwissen",
+    "item1": "\u00dcber 2.000 Jahre Heilwissen",
     "item2": "Sanft. Ganzheitlich. Wirksam.",
     "item3": "Kostenlos entdecken"
   },
   "tcmIntro": {
     "title": "Was ist Traditionelle Chinesische Medizin?",
     "qi_title": "Qi & Lebensenergie",
-    "qi_text": "Qi ist die vitale Lebensenergie, die durch deinen Körper fließt. Wenn Qi frei und ausgeglichen fließt, fühlst du dich gesund und voller Energie. Blockaden können zu Beschwerden führen.",
+    "qi_text": "Qi ist die vitale Lebensenergie, die durch deinen K\u00f6rper flie\u00dft. Wenn Qi frei und ausgeglichen flie\u00dft, f\u00fchlst du dich gesund und voller Energie. Blockaden k\u00f6nnen zu Beschwerden f\u00fchren.",
     "qi_quote": "\u201EWo Qi flie\u00dft, folgt Gesundheit.\u201C",
     "yinyang_title": "Yin & Yang",
     "yinyang_text": "Zwei gegens\u00e4tzliche, aber sich erg\u00e4nzende Kr\u00e4fte \u2014 wie Ruhe und Aktivit\u00e4t, K\u00e4lte und W\u00e4rme. Gesundheit entsteht, wenn Yin und Yang im Gleichgewicht sind.",
@@ -42,80 +42,80 @@
     "elements_quote": "\u201EAlles ist miteinander verbunden.\u201C"
   },
   "shifuQi": {
-    "title": "Dein persönlicher TCM-Experte: Shifu Qi",
-    "body": "Beschreibe deine Beschwerden — Shifu Qi analysiert sie nach den Prinzipien der TCM und gibt dir fundierte Empfehlungen, zugeschnitten auf dein individuelles Muster.",
+    "title": "Dein pers\u00f6nlicher TCM-Experte: Shifu Qi",
+    "body": "Beschreibe deine Beschwerden \u2014 Shifu Qi analysiert sie nach den Prinzipien der TCM und gibt dir fundierte Empfehlungen, zugeschnitten auf dein individuelles Muster.",
     "cta": "Jetzt Shifu Qi fragen",
     "bullet1": "Analysiert dein Muster nach TCM-Prinzipien",
-    "bullet2": "Empfiehlt Kräuter, Ernährung & Übungen",
+    "bullet2": "Empfiehlt Kr\u00e4uter, Ern\u00e4hrung & \u00dcbungen",
     "bullet3": "Antwortet auf Deutsch und Englisch",
-    "chatUser": "Ich habe oft kalte Füße und fühle mich erschöpft.",
-    "chatBot": "Nach den Prinzipien der TCM deutet dies auf einen Nieren-Yang-Mangel hin. Ich empfehle wärmende Lebensmittel wie Ingwer, Zimt und Lamm sowie..."
+    "chatUser": "Ich habe oft kalte F\u00fc\u00dfe und f\u00fchle mich ersch\u00f6pft.",
+    "chatBot": "Nach den Prinzipien der TCM deutet dies auf einen Nieren-Yang-Mangel hin. Ich empfehle w\u00e4rmende Lebensmittel wie Ingwer, Zimt und Lamm sowie..."
   },
   "blogPreview": {
     "title": "Wissen aus der TCM",
     "allArticles": "Alle Artikel",
     "readMore": "Weiterlesen",
     "readTime": "5 min Lesezeit",
-    "article1Cat": "Ernährung",
-    "article1Title": "Wärme von innen: TCM-Ernährung im Winter",
-    "article1Excerpt": "Erfahre, welche Lebensmittel nach der Traditionellen Chinesischen Medizin dein Yang stärken...",
-    "article2Cat": "Kräuter",
-    "article2Title": "Die 5 wichtigsten TCM-Kräuter für den Alltag",
-    "article2Excerpt": "Von Astragalus bis Goji-Beere — diese Heilkräuter der TCM solltest du kennen...",
+    "article1Cat": "Ern\u00e4hrung",
+    "article1Title": "W\u00e4rme von innen: TCM-Ern\u00e4hrung im Winter",
+    "article1Excerpt": "Erfahre, welche Lebensmittel nach der Traditionellen Chinesischen Medizin dein Yang st\u00e4rken...",
+    "article2Cat": "Kr\u00e4uter",
+    "article2Title": "Die 5 wichtigsten TCM-Kr\u00e4uter f\u00fcr den Alltag",
+    "article2Excerpt": "Von Astragalus bis Goji-Beere \u2014 diese Heilkr\u00e4uter der TCM solltest du kennen...",
     "article3Cat": "Grundlagen",
     "article3Title": "Qi verstehen: Die Lebensenergie der TCM",
-    "article3Excerpt": "Was ist Qi wirklich? Ein verständlicher Einstieg in das Herzstück der Traditionellen Chinesischen Medizin..."
+    "article3Excerpt": "Was ist Qi wirklich? Ein verst\u00e4ndlicher Einstieg in das Herzst\u00fcck der Traditionellen Chinesischen Medizin..."
   },
   "fiveElements": {
-    "title": "Die Fünf Elemente der TCM",
-    "wood": "Holz", "woodSymbol": "木",
-    "woodOrgan": "Leber & Gallenblase", "woodSeason": "Frühling",
+    "title": "Die F\u00fcnf Elemente der TCM",
+    "wood": "Holz", "woodSymbol": "\u6728",
+    "woodOrgan": "Leber & Gallenblase", "woodSeason": "Fr\u00fchling",
     "woodEmotion": "Wut & Entschlossenheit", "woodTaste": "Sauer",
-    "woodText": "Das Element Holz steht für Wachstum und Erneuerung. Es nährt Kreativität und Flexibilität.",
-    "fire": "Feuer", "fireSymbol": "火",
-    "fireOrgan": "Herz & Dünndarm", "fireSeason": "Sommer",
+    "woodText": "Das Element Holz steht f\u00fcr Wachstum und Erneuerung. Es n\u00e4hrt Kreativit\u00e4t und Flexibilit\u00e4t.",
+    "fire": "Feuer", "fireSymbol": "\u706b",
+    "fireOrgan": "Herz & D\u00fcnndarm", "fireSeason": "Sommer",
     "fireEmotion": "Freude & Begeisterung", "fireTaste": "Bitter",
-    "fireText": "Feuer repräsentiert Wärme, Liebe und Lebensfreude. Es regiert das Herz und den Geist.",
-    "earth": "Erde", "earthSymbol": "土",
-    "earthOrgan": "Milz & Magen", "earthSeason": "Spätsommer",
-    "earthEmotion": "Fürsorge & Grübeln", "earthTaste": "Süß",
-    "earthText": "Die Erde steht für Stabilität und Nährung. Sie ist das Zentrum, das alle Elemente verbindet.",
-    "metal": "Metall", "metalSymbol": "金",
+    "fireText": "Feuer repr\u00e4sentiert W\u00e4rme, Liebe und Lebensfreude. Es regiert das Herz und den Geist.",
+    "earth": "Erde", "earthSymbol": "\u571f",
+    "earthOrgan": "Milz & Magen", "earthSeason": "Sp\u00e4tsommer",
+    "earthEmotion": "F\u00fcrsorge & Gr\u00fcbeln", "earthTaste": "S\u00fc\u00df",
+    "earthText": "Die Erde steht f\u00fcr Stabilit\u00e4t und N\u00e4hrung. Sie ist das Zentrum, das alle Elemente verbindet.",
+    "metal": "Metall", "metalSymbol": "\u91d1",
     "metalOrgan": "Lunge & Dickdarm", "metalSeason": "Herbst",
     "metalEmotion": "Trauer & Loslassen", "metalTaste": "Scharf",
-    "metalText": "Metall steht für Klarheit, Struktur und das Loslassen. Es unterstützt Atmung und Abwehrkraft.",
-    "water": "Wasser", "waterSymbol": "水",
+    "metalText": "Metall steht f\u00fcr Klarheit, Struktur und das Loslassen. Es unterst\u00fctzt Atmung und Abwehrkraft.",
+    "water": "Wasser", "waterSymbol": "\u6c34",
     "waterOrgan": "Niere & Blase", "waterSeason": "Winter",
     "waterEmotion": "Angst & Willenskraft", "waterTaste": "Salzig",
-    "waterText": "Wasser ist die Quelle des Lebens. Es steht für Tiefe, Weisheit und die Essenz unserer Vitalität."
+    "waterText": "Wasser ist die Quelle des Lebens. Es steht f\u00fcr Tiefe, Weisheit und die Essenz unserer Vitalit\u00e4t."
   },
   "newsletter": {
     "title": "TCM-Wissen direkt in dein Postfach",
-    "subtitle": "Monatliche TCM-Tipps, saisonale Ernährungsempfehlungen und Heilwissen direkt von Shifu Qi.",
+    "subtitle": "Monatliche TCM-Tipps, saisonale Ern\u00e4hrungsempfehlungen und Heilwissen direkt von Shifu Qi.",
     "placeholder": "Deine E-Mail-Adresse",
     "cta": "Anmelden",
     "privacy": "Kein Spam. Jederzeit abmeldbar."
   },
   "footer": {
-    "tagline": "Dein Wegweiser für ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin.",
+    "tagline": "Dein Wegweiser f\u00fcr ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin.",
     "blog": "Blog",
     "assistant": "Shifu Qi",
-    "aboutTcm": "Über TCM",
-    "disclaimer": "© 2025 ShifuHealth · Kein Ersatz für medizinischen Rat"
+    "aboutTcm": "\u00dcber TCM",
+    "disclaimer": "\u00a9 2025 ShifuHealth \u00b7 Kein Ersatz f\u00fcr medizinischen Rat"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Artikel über Traditionelle Chinesische Medizin, Gesundheitstipps und saisonale Empfehlungen.",
+    "subtitle": "Artikel \u00fcber Traditionelle Chinesische Medizin, Gesundheitstipps und saisonale Empfehlungen.",
     "readMore": "Weiterlesen",
     "noArticles": "Noch keine Artikel vorhanden.",
-    "publishedAt": "Veröffentlicht am"
+    "publishedAt": "Ver\u00f6ffentlicht am"
   },
   "assistant": {
     "title": "Shifu Qi \u2014 Dein TCM-Experte",
     "subtitle": "Beschreibe deine Beschwerden. Shifu Qi erkl\u00e4rt sie nach den Prinzipien der Traditionellen Chinesischen Medizin und gibt dir fundierte Empfehlungen.",
     "placeholder": "Stelle deine Frage...",
-    "metaTitle": "Shifu Qi \u2013 KI-Assistent f\u00fcr Traditionelle Chinesische Medizin | ShifuHealth",
-    "metaDescription": "Frage Shifu Qi \u2014 deinen pers\u00f6nlichen KI-Experten f\u00fcr TCM. Erhalte fundierte Empfehlungen zu Ern\u00e4hrung, Kr\u00e4utern und Lebensstil nach den Prinzipien der Traditionellen Chinesischen Medizin.",
+    "metaTitle": "Shifu Qi \u2013 Dein TCM-Experte f\u00fcr Traditionelle Chinesische Medizin | ShifuHealth",
+    "metaDescription": "Frage Shifu Qi \u2014 deinen pers\u00f6nlichen TCM-Experten. Erhalte fundierte Empfehlungen zu Ern\u00e4hrung, Kr\u00e4utern und Lebensstil nach den Prinzipien der Traditionellen Chinesischen Medizin.",
     "infoCard1Title": "Wie funktioniert Shifu Qi?",
     "infoCard1Text": "Shifu Qi nutzt eine umfangreiche TCM-Wissensbasis und erkl\u00e4rt deine Symptome nach den Prinzipien der Traditionellen Chinesischen Medizin \u2014 verst\u00e4ndlich und fundiert.",
     "infoCard2Title": "Ist das echte medizinische Beratung?",
@@ -129,7 +129,7 @@
     "welcome": "Willkommen. Ich bin Shifu Qi \u2014 dein pers\u00f6nlicher TCM-Begleiter. Beschreibe deine Beschwerden und ich erkl\u00e4re sie aus der Sicht der Traditionellen Chinesischen Medizin.",
     "inputPlaceholder": "Schreibe Shifu Qi...",
     "disclaimer": "\u262f Kein Ersatz f\u00fcr medizinischen Rat",
-    "demoNote": "\u2726 Demo \u2014 Echte KI-Anbindung folgt in K\u00fcrze",
+    "demoNote": "\u2726 Shifu Qi ist bald f\u00fcr dich da",
     "chip1": "Bauchschmerzen",
     "chip2": "Schlafprobleme",
     "chip3": "M\u00fcdigkeit",
