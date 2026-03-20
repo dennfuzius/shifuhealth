@@ -5,7 +5,6 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import "../globals.css";
 
 type Props = {
   children: ReactNode;
@@ -31,6 +30,7 @@ export async function generateMetadata({
       template: `%s | ShifuHealth`,
     },
     description: t("description"),
+    keywords: t("keywords"),
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
@@ -45,6 +45,24 @@ export async function generateMetadata({
       siteName: "ShifuHealth",
       locale: locale === "de" ? "de_DE" : "en_US",
       type: "website",
+      images: [
+        {
+          url: `${baseUrl}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "ShifuHealth – Traditional Chinese Medicine",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [`${baseUrl}/og-image.jpg`],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
@@ -55,7 +73,15 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className="min-h-screen flex flex-col">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-bg)" }}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

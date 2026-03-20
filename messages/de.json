@@ -1,25 +1,95 @@
 {
   "metadata": {
-    "title": "ShifuHealth – Traditionelle Chinesische Medizin",
-    "description": "Ihr Wegweiser für ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin. Fundiertes Wissen, saisonale Tipps und KI-gestützte Beratung."
+    "title": "ShifuHealth – Traditionelle Chinesische Medizin | TCM Blog & KI-Assistent",
+    "description": "Entdecke die Heilkunst der Traditionellen Chinesischen Medizin. TCM-Wissen, Ernährungsempfehlungen, Kräuterkunde und dein persönlicher KI-Assistent Shifu Qi.",
+    "keywords": "Traditionelle Chinesische Medizin, TCM, TCM Blog, Qi, Yin Yang, Fünf Elemente, TCM Ernährung, TCM Kräuter, Akupunktur, TCM Assistent, chinesische Heilkunde, TCM Deutschland"
   },
   "nav": {
-    "home": "Startseite",
     "blog": "Blog",
-    "assistant": "KI-Assistent",
+    "assistant": "Shifu Qi",
+    "aboutTcm": "Über TCM",
     "language": "EN"
   },
   "hero": {
-    "title": "Ihr Weg zu ganzheitlicher Gesundheit",
-    "subtitle": "Entdecken Sie die Weisheit der Traditionellen Chinesischen Medizin – fundiert, verständlich und alltagsnah.",
-    "cta": "Blog entdecken",
-    "ctaAssistant": "KI-Assistent testen",
-    "feature1Title": "Fundiertes Wissen",
-    "feature1Text": "Evidenzbasierte Einblicke in die TCM, verständlich aufbereitet.",
-    "feature2Title": "Saisonale Tipps",
-    "feature2Text": "Leben Sie im Einklang mit den Jahreszeiten.",
-    "feature3Title": "KI-Assistent",
-    "feature3Text": "Ihr persönlicher Wegbegleiter für TCM-Fragen."
+    "title": "Die Weisheit der traditionellen chinesischen Medizin — für dein modernes Leben",
+    "subtitle": "Entdecke uralte Heilkunst neu. Shifu Qi begleitet dich auf dem Weg zu Gesundheit und Balance.",
+    "ctaPrimary": "Shifu Qi fragen",
+    "ctaSecondary": "Blog lesen"
+  },
+  "trust": {
+    "item1": "Über 2000 Jahre Tradition",
+    "item2": "Westlich erklärt",
+    "item3": "Kostenlos starten"
+  },
+  "tcmIntro": {
+    "title": "Was ist Traditionelle Chinesische Medizin?",
+    "qi_title": "Qi & Lebensenergie",
+    "qi_text": "Qi ist die vitale Lebensenergie, die durch deinen Körper fließt. Wenn Qi frei und ausgeglichen fließt, fühlst du dich gesund und voller Energie. Blockaden können zu Beschwerden führen.",
+    "yinyang_title": "Yin & Yang",
+    "yinyang_text": "Zwei gegensätzliche, aber sich ergänzende Kräfte — wie Ruhe und Aktivität, Kälte und Wärme. Gesundheit entsteht, wenn Yin und Yang im Gleichgewicht sind.",
+    "elements_title": "Die fünf Elemente",
+    "elements_text": "Holz, Feuer, Erde, Metall und Wasser — fünf Wandlungsphasen, die Organe, Emotionen und Jahreszeiten miteinander verbinden."
+  },
+  "shifuQi": {
+    "title": "Dein persönlicher TCM-Experte: Shifu Qi",
+    "body": "Beschreibe deine Beschwerden — Shifu Qi analysiert sie nach den Prinzipien der TCM und gibt dir fundierte Empfehlungen, zugeschnitten auf dein individuelles Muster.",
+    "cta": "Jetzt Shifu Qi fragen",
+    "chatUser": "Ich fühle mich oft müde und habe kalte Hände.",
+    "chatBot": "Nach TCM-Prinzipien könnte das auf einen Qi- und Yang-Mangel hindeuten. Ich empfehle wärmende Lebensmittel wie Ingwer und Zimt..."
+  },
+  "blogPreview": {
+    "title": "Wissen aus der TCM",
+    "allArticles": "Alle Artikel",
+    "readMore": "Weiterlesen",
+    "article1Cat": "Grundlagen",
+    "article1Title": "Was ist Qi? Eine Einführung in die Lebensenergie",
+    "article1Excerpt": "Qi ist das Fundament der TCM. Erfahre, wie diese vitale Kraft deinen Körper beeinflusst und wie du sie stärken kannst.",
+    "article2Cat": "Ernährung",
+    "article2Title": "TCM-Ernährung: Essen nach den fünf Elementen",
+    "article2Excerpt": "Lerne, wie du mit der richtigen Ernährung dein inneres Gleichgewicht unterstützt — abgestimmt auf die Jahreszeit.",
+    "article3Cat": "Kräuterkunde",
+    "article3Title": "Die 5 wichtigsten TCM-Kräuter für Einsteiger",
+    "article3Excerpt": "Von Goji-Beeren bis Astragalus: Entdecke die Heilkräuter der TCM und ihre Wirkung auf dein Wohlbefinden."
+  },
+  "fiveElements": {
+    "title": "Die Fünf Elemente der TCM",
+    "wood": "Holz",
+    "woodOrgan": "Leber & Gallenblase",
+    "woodSeason": "Frühling",
+    "woodEmotion": "Wut & Entschlossenheit",
+    "woodText": "Das Element Holz steht für Wachstum und Erneuerung. Es nährt Kreativität und Flexibilität.",
+    "fire": "Feuer",
+    "fireOrgan": "Herz & Dünndarm",
+    "fireSeason": "Sommer",
+    "fireEmotion": "Freude & Begeisterung",
+    "fireText": "Feuer repräsentiert Wärme, Liebe und Lebensfreude. Es regiert das Herz und den Geist.",
+    "earth": "Erde",
+    "earthOrgan": "Milz & Magen",
+    "earthSeason": "Spätsommer",
+    "earthEmotion": "Fürsorge & Grübeln",
+    "earthText": "Die Erde steht für Stabilität und Nährung. Sie ist das Zentrum, das alle Elemente verbindet.",
+    "metal": "Metall",
+    "metalOrgan": "Lunge & Dickdarm",
+    "metalSeason": "Herbst",
+    "metalEmotion": "Trauer & Loslassen",
+    "metalText": "Metall steht für Klarheit, Struktur und das Loslassen. Es unterstützt Atmung und Abwehrkraft.",
+    "water": "Wasser",
+    "waterOrgan": "Niere & Blase",
+    "waterSeason": "Winter",
+    "waterEmotion": "Angst & Willenskraft",
+    "waterText": "Wasser ist die Quelle des Lebens. Es steht für Tiefe, Weisheit und die Essenz unserer Vitalität."
+  },
+  "newsletter": {
+    "title": "TCM-Wissen direkt in dein Postfach",
+    "placeholder": "Deine E-Mail-Adresse",
+    "cta": "Anmelden"
+  },
+  "footer": {
+    "tagline": "Dein Wegweiser für ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin.",
+    "blog": "Blog",
+    "assistant": "Shifu Qi",
+    "aboutTcm": "Über TCM",
+    "disclaimer": "© 2025 ShifuHealth · Kein Ersatz für medizinischen Rat"
   },
   "blog": {
     "title": "Blog",
@@ -29,15 +99,10 @@
     "publishedAt": "Veröffentlicht am"
   },
   "assistant": {
-    "title": "KI-Assistent",
-    "subtitle": "Stellen Sie Ihre Fragen zur Traditionellen Chinesischen Medizin – unser KI-Assistent hilft Ihnen weiter.",
-    "placeholder": "Stellen Sie Ihre Frage...",
+    "title": "Shifu Qi",
+    "subtitle": "Stelle deine Fragen zur Traditionellen Chinesischen Medizin — Shifu Qi hilft dir weiter.",
+    "placeholder": "Stelle deine Frage...",
     "comingSoon": "Demnächst verfügbar",
-    "comingSoonText": "Unser KI-gestützter TCM-Assistent wird bald hier verfügbar sein. Er wird Ihnen helfen, die Prinzipien der TCM besser zu verstehen und personalisierte Empfehlungen zu erhalten."
-  },
-  "footer": {
-    "tagline": "Weisheit der Traditionellen Chinesischen Medizin – verständlich und zugänglich.",
-    "disclaimer": "Die Inhalte dienen ausschließlich der Information und ersetzen keine ärztliche Beratung.",
-    "rights": "Alle Rechte vorbehalten."
+    "comingSoonText": "Shifu Qi, dein KI-gestützter TCM-Assistent, wird bald hier verfügbar sein. Er wird dir helfen, die Prinzipien der TCM besser zu verstehen und personalisierte Empfehlungen zu erhalten."
   }
 }

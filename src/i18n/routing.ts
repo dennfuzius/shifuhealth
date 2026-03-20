@@ -11,6 +11,10 @@ export const routing = defineRouting({
       de: "/assistent",
       en: "/assistant",
     },
+    "/ueber-tcm": {
+      de: "/ueber-tcm",
+      en: "/about-tcm",
+    },
   },
 });
 

@@ -4,22 +4,35 @@ export default function AssistantPage() {
   const t = useTranslations("assistant");
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="mx-auto max-w-3xl px-5 py-16">
       <div className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-4">
+        <h1
+          className="font-body text-[28px] md:text-[42px] font-bold mb-4"
+          style={{ color: "var(--color-text)" }}
+        >
           {t("title")}
         </h1>
-        <p className="text-lg text-forest-700">{t("subtitle")}</p>
+        <p
+          className="font-body text-[16px] leading-[1.75]"
+          style={{ color: "var(--color-text-muted)" }}
+        >
+          {t("subtitle")}
+        </p>
       </div>
 
-      <div className="rounded-2xl border border-sage-200 bg-white p-12 text-center">
-        <div className="w-16 h-16 rounded-full bg-sage-100 flex items-center justify-center mx-auto mb-6">
+      <div
+        className="card p-12 text-center"
+      >
+        <div
+          className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+          style={{ backgroundColor: "var(--color-surface)" }}
+        >
           <svg
-            className="w-8 h-8 text-sage-600"
+            className="w-8 h-8"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="currentColor"
+            stroke="var(--color-primary)"
           >
             <path
               strokeLinecap="round"
@@ -28,10 +41,16 @@ export default function AssistantPage() {
             />
           </svg>
         </div>
-        <h2 className="text-xl font-serif font-semibold text-forest-900 mb-3">
+        <h2
+          className="font-body text-[28px] font-bold mb-3"
+          style={{ color: "var(--color-text)" }}
+        >
           {t("comingSoon")}
         </h2>
-        <p className="text-forest-700 leading-relaxed max-w-md mx-auto">
+        <p
+          className="font-body text-[16px] leading-[1.75] max-w-md mx-auto"
+          style={{ color: "var(--color-text-muted)" }}
+        >
           {t("comingSoonText")}
         </p>
       </div>

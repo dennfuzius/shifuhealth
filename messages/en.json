@@ -1,25 +1,95 @@
 {
   "metadata": {
-    "title": "ShifuHealth – Traditional Chinese Medicine",
-    "description": "Your guide to holistic health through Traditional Chinese Medicine. Evidence-based knowledge, seasonal tips, and AI-powered guidance."
+    "title": "ShifuHealth – Traditional Chinese Medicine | TCM Blog & AI Assistant",
+    "description": "Explore the healing art of Traditional Chinese Medicine. TCM knowledge, dietary advice, herbal wisdom and your personal AI assistant Shifu Qi.",
+    "keywords": "Traditional Chinese Medicine, TCM, TCM blog, Qi, Yin Yang, Five Elements, TCM diet, TCM herbs, acupuncture, TCM assistant, Chinese healing, holistic health"
   },
   "nav": {
-    "home": "Home",
     "blog": "Blog",
-    "assistant": "AI Assistant",
+    "assistant": "Shifu Qi",
+    "aboutTcm": "About TCM",
     "language": "DE"
   },
   "hero": {
-    "title": "Your Path to Holistic Health",
-    "subtitle": "Discover the wisdom of Traditional Chinese Medicine — grounded, accessible, and practical for everyday life.",
-    "cta": "Explore the Blog",
-    "ctaAssistant": "Try the AI Assistant",
-    "feature1Title": "Grounded Knowledge",
-    "feature1Text": "Evidence-based insights into TCM, clearly explained.",
-    "feature2Title": "Seasonal Guidance",
-    "feature2Text": "Live in harmony with the seasons.",
-    "feature3Title": "AI Assistant",
-    "feature3Text": "Your personal guide for TCM questions."
+    "title": "The Wisdom of Traditional Chinese Medicine — for your modern life",
+    "subtitle": "Rediscover ancient healing. Shifu Qi guides you on your path to health and balance.",
+    "ctaPrimary": "Ask Shifu Qi",
+    "ctaSecondary": "Read the Blog"
+  },
+  "trust": {
+    "item1": "Over 2000 Years of Tradition",
+    "item2": "Explained for the West",
+    "item3": "Start for Free"
+  },
+  "tcmIntro": {
+    "title": "What is Traditional Chinese Medicine?",
+    "qi_title": "Qi & Life Energy",
+    "qi_text": "Qi is the vital life energy that flows through your body. When Qi flows freely and in balance, you feel healthy and full of vitality. Blockages can lead to discomfort.",
+    "yinyang_title": "Yin & Yang",
+    "yinyang_text": "Two opposing yet complementary forces — like rest and activity, cold and warmth. Health arises when Yin and Yang are in balance.",
+    "elements_title": "The Five Elements",
+    "elements_text": "Wood, Fire, Earth, Metal and Water — five transformation phases that connect organs, emotions and seasons."
+  },
+  "shifuQi": {
+    "title": "Your Personal TCM Expert: Shifu Qi",
+    "body": "Describe your symptoms — Shifu Qi analyses them according to TCM principles and gives you grounded recommendations tailored to your individual pattern.",
+    "cta": "Ask Shifu Qi now",
+    "chatUser": "I often feel tired and my hands are always cold.",
+    "chatBot": "Based on TCM principles, this could indicate a Qi and Yang deficiency. I recommend warming foods like ginger and cinnamon..."
+  },
+  "blogPreview": {
+    "title": "Knowledge from TCM",
+    "allArticles": "All articles",
+    "readMore": "Read more",
+    "article1Cat": "Fundamentals",
+    "article1Title": "What is Qi? An Introduction to Life Energy",
+    "article1Excerpt": "Qi is the foundation of TCM. Learn how this vital force affects your body and how you can strengthen it.",
+    "article2Cat": "Nutrition",
+    "article2Title": "TCM Nutrition: Eating by the Five Elements",
+    "article2Excerpt": "Learn how to support your inner balance with the right diet — adapted to the season.",
+    "article3Cat": "Herbal Medicine",
+    "article3Title": "The 5 Most Important TCM Herbs for Beginners",
+    "article3Excerpt": "From goji berries to astragalus: discover TCM healing herbs and their effects on your wellbeing."
+  },
+  "fiveElements": {
+    "title": "The Five Elements of TCM",
+    "wood": "Wood",
+    "woodOrgan": "Liver & Gallbladder",
+    "woodSeason": "Spring",
+    "woodEmotion": "Anger & Determination",
+    "woodText": "The Wood element represents growth and renewal. It nourishes creativity and flexibility.",
+    "fire": "Fire",
+    "fireOrgan": "Heart & Small Intestine",
+    "fireSeason": "Summer",
+    "fireEmotion": "Joy & Enthusiasm",
+    "fireText": "Fire represents warmth, love and the joy of life. It governs the heart and the spirit.",
+    "earth": "Earth",
+    "earthOrgan": "Spleen & Stomach",
+    "earthSeason": "Late Summer",
+    "earthEmotion": "Care & Overthinking",
+    "earthText": "Earth stands for stability and nourishment. It is the centre that connects all elements.",
+    "metal": "Metal",
+    "metalOrgan": "Lung & Large Intestine",
+    "metalSeason": "Autumn",
+    "metalEmotion": "Grief & Letting Go",
+    "metalText": "Metal stands for clarity, structure and letting go. It supports breathing and the immune system.",
+    "water": "Water",
+    "waterOrgan": "Kidney & Bladder",
+    "waterSeason": "Winter",
+    "waterEmotion": "Fear & Willpower",
+    "waterText": "Water is the source of life. It stands for depth, wisdom and the essence of our vitality."
+  },
+  "newsletter": {
+    "title": "TCM Wisdom straight to your inbox",
+    "placeholder": "Your email address",
+    "cta": "Subscribe"
+  },
+  "footer": {
+    "tagline": "Your guide to holistic health through Traditional Chinese Medicine.",
+    "blog": "Blog",
+    "assistant": "Shifu Qi",
+    "aboutTcm": "About TCM",
+    "disclaimer": "© 2025 ShifuHealth · Not a substitute for medical advice"
   },
   "blog": {
     "title": "Blog",
@@ -29,15 +99,10 @@
     "publishedAt": "Published on"
   },
   "assistant": {
-    "title": "AI Assistant",
-    "subtitle": "Ask your questions about Traditional Chinese Medicine — our AI assistant is here to help.",
+    "title": "Shifu Qi",
+    "subtitle": "Ask your questions about Traditional Chinese Medicine — Shifu Qi is here to help.",
     "placeholder": "Ask your question...",
     "comingSoon": "Coming Soon",
-    "comingSoonText": "Our AI-powered TCM assistant will be available here soon. It will help you understand TCM principles better and receive personalized recommendations."
-  },
-  "footer": {
-    "tagline": "The wisdom of Traditional Chinese Medicine — accessible and understandable.",
-    "disclaimer": "Content is for informational purposes only and does not replace professional medical advice.",
-    "rights": "All rights reserved."
+    "comingSoonText": "Shifu Qi, your AI-powered TCM assistant, will be available here soon. It will help you understand TCM principles better and receive personalized recommendations."
   }
 }

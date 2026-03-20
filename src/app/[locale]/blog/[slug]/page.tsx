@@ -64,26 +64,33 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound();
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16">
+    <article className="mx-auto max-w-3xl px-5 py-16">
       <Link
         href="/blog"
-        className="text-sm text-sage-600 hover:text-sage-700 mb-8 inline-block"
+        className="font-body text-[13px] font-medium mb-8 inline-block transition-all duration-200 ease-in-out hover:opacity-70"
+        style={{ color: "var(--color-accent)" }}
       >
         ← {t("title")}
       </Link>
 
       {article.category && (
-        <span className="block text-xs font-medium text-sage-600 uppercase tracking-wide mb-2">
+        <span
+          className="block font-body text-[12px] font-medium uppercase tracking-wider mb-2"
+          style={{ color: "var(--color-primary-lt)" }}
+        >
           {article.category.title[locale as "de" | "en"]}
         </span>
       )}
 
-      <h1 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-4">
+      <h1
+        className="font-body text-[28px] md:text-[42px] font-bold mb-4"
+        style={{ color: "var(--color-text)" }}
+      >
         {article.title[locale as "de" | "en"]}
       </h1>
 
       {article.publishedAt && (
-        <p className="text-sm text-sage-500 mb-8">
+        <p className="font-body text-[13px] mb-8" style={{ color: "var(--color-text-muted)" }}>
           {t("publishedAt")}{" "}
           {new Date(article.publishedAt).toLocaleDateString(
             locale === "de" ? "de-DE" : "en-US",
@@ -97,7 +104,12 @@ export default async function ArticlePage({ params }: Props) {
           {article.symptomTags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-sage-100 px-3 py-1 text-xs text-sage-700"
+              className="rounded-btn px-3 py-1 font-body text-[12px]"
+              style={{
+                backgroundColor: "var(--color-surface)",
+                color: "var(--color-text-muted)",
+                border: "1px solid var(--color-border)",
+              }}
             >
               {tag}
             </span>
@@ -105,7 +117,7 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       )}
 
-      <div className="prose prose-lg prose-stone max-w-none">
+      <div className="prose prose-lg max-w-none font-body" style={{ color: "var(--color-text)" }}>
         {article.body && (
           <PortableText value={article.body as Array<Record<string, unknown> & { _type: string; _key: string }>} />
         )}
