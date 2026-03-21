@@ -28,7 +28,15 @@
       "Bash(git -C /Users/godennis/Desktop/shifuhealth log --oneline -3)",
       "Bash(git -C /Users/godennis/Desktop/shifuhealth diff --stat)",
       "Bash(git push:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(npx sanity@latest whoami)",
+      "Bash(npx sanity@latest debug)",
+      "Bash(npx sanity@latest projects create --display-name \"ShifuHealth\" --organization \"\")",
+      "Bash(npx sanity@latest projects create \"ShifuHealth\" --dataset production --dataset-visibility public --yes --json)",
+      "Bash(npx sanity@latest organizations list --json)",
+      "Bash(npx sanity@latest projects list --json)",
+      "Bash(npx sanity@latest projects list)",
+      "Bash(npx tsx:*)"
     ]
   }
 }
