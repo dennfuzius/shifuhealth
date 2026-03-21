@@ -38,7 +38,9 @@
       "Bash(npx sanity@latest projects list)",
       "Bash(npx tsx:*)",
       "Bash(timeout 15 npx sanity dev --port 3333)",
-      "Bash(grep '\"\"sanity\"\"' package.json)"
+      "Bash(grep '\"\"sanity\"\"' package.json)",
+      "Bash(node -e \"try { require\\(''next-sanity/webhook''\\); console.log\\(''OK''\\) } catch\\(e\\) { console.log\\(''FAIL:'', e.message\\) }\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/de/blog)"
     ]
   }
 }
