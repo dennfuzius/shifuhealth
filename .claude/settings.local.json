@@ -36,7 +36,9 @@
       "Bash(npx sanity@latest organizations list --json)",
       "Bash(npx sanity@latest projects list --json)",
       "Bash(npx sanity@latest projects list)",
-      "Bash(npx tsx:*)"
+      "Bash(npx tsx:*)",
+      "Bash(timeout 15 npx sanity dev --port 3333)",
+      "Bash(grep '\"\"sanity\"\"' package.json)"
     ]
   }
 }

@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/studio/node_modules
+/studio/dist
 /.pnp
 .pnp.js
 .yarn/install-state.gz
