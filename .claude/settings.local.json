@@ -18,7 +18,17 @@
       "Bash(curl -sI http://localhost:3099/)",
       "Bash(pkill -f 'next start')",
       "Bash(python3 -c \":*)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git status:*)",
+      "Bash(grep -n \"py-16 md:py-24\" /Users/godennis/Desktop/shifuhealth/src/app/[locale]/page.tsx)",
+      "Bash(git diff:*)",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill:*)",
+      "Bash(git -C /Users/godennis/Desktop/shifuhealth status -u)",
+      "Bash(git -C /Users/godennis/Desktop/shifuhealth log --oneline -3)",
+      "Bash(git -C /Users/godennis/Desktop/shifuhealth diff --stat)",
+      "Bash(git push:*)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

@@ -1,30 +1,33 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { getArticles, type Article } from "@/sanity/queries";
+import Image from "next/image";
+import { getAllArticles, type Article } from "@/sanity/queries";
+import { urlFor } from "@/sanity/client";
+
+export const revalidate = 60;
 
 export default async function BlogPage() {
   const t = await getTranslations("blog");
-  const locale = await getLocale();
+  const locale = (await getLocale()) as "de" | "en";
 
   let articles: Article[] = [];
   try {
-    articles = await getArticles();
+    articles = await getAllArticles();
   } catch {
     // Sanity not configured yet — show empty state
   }
 
   return (
-    <div className="mx-auto max-w-5xl px-5 py-16">
+    <div className="mx-auto max-w-6xl px-6 pt-28 pb-24">
       <div className="mb-12">
-        <h1
-          className="font-body text-[28px] md:text-[42px] font-bold mb-4"
-          style={{ color: "var(--color-text)" }}
-        >
-          {t("title")}
-        </h1>
+        <div
+          className="w-12 h-1 rounded-full mb-8"
+          style={{ backgroundColor: "var(--color-primary)" }}
+        />
+        <h1 className="mb-4">{t("title")}</h1>
         <p
-          className="font-body text-[16px] leading-[1.75]"
-          style={{ color: "var(--color-text-muted)" }}
+          className="font-body text-base leading-relaxed max-w-xl"
+          style={{ color: "var(--color-text-secondary)" }}
         >
           {t("subtitle")}
         </p>
@@ -32,60 +35,75 @@ export default async function BlogPage() {
 
       {articles.length === 0 ? (
         <div
-          className="rounded-card p-12 text-center"
-          style={{
-            border: "1px solid var(--color-border)",
-            backgroundColor: "var(--color-surface)",
-          }}
+          className="card p-12 text-center"
+          style={{ border: "1px solid var(--color-border)" }}
         >
-          <p className="font-body text-[16px]" style={{ color: "var(--color-text-muted)" }}>
+          <p className="font-body text-base" style={{ color: "var(--color-text-muted)" }}>
             {t("noArticles")}
           </p>
         </div>
       ) : (
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Link
               key={article._id}
               href={{ pathname: "/blog/[slug]", params: { slug: article.slug.current } }}
-              className="group card overflow-hidden transition-all duration-200 ease-in-out"
+              className="group card overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               {article.featuredImage && (
-                <div className="aspect-video" style={{ backgroundColor: "var(--color-surface)" }} />
+                <div className="relative h-52 overflow-hidden">
+                  <Image
+                    src={urlFor(article.featuredImage).width(600).height(400).url()}
+                    alt={article.featuredImage.alt || article.title[locale]}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
               )}
               <div className="p-6">
-                {article.category && (
-                  <span
-                    className="font-body text-[12px] font-medium uppercase tracking-wider"
-                    style={{ color: "var(--color-primary-lt)" }}
+                <div className="flex items-center justify-between mb-3">
+                  {article.category && (
+                    <span
+                      className="font-body text-xs font-semibold px-2.5 py-1 rounded-lg"
+                      style={{
+                        backgroundColor: "var(--color-primary-10)",
+                        color: "var(--color-primary)",
+                      }}
+                    >
+                      {article.category.title[locale]}
+                    </span>
+                  )}
+                  {article.readingTime && (
+                    <span className="font-body text-xs" style={{ color: "var(--color-text-muted)" }}>
+                      {article.readingTime} min
+                    </span>
+                  )}
+                </div>
+                <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-[var(--color-primary)] transition-colors duration-200">
+                  {article.title[locale]}
+                </h3>
+                {article.excerpt?.[locale] && (
+                  <p
+                    className="font-body text-sm leading-relaxed mb-4"
+                    style={{ color: "var(--color-text-secondary)" }}
                   >
-                    {article.category.title[locale as "de" | "en"]}
-                  </span>
+                    {article.excerpt[locale]}
+                  </p>
                 )}
-                <h2
-                  className="font-body text-[18px] font-medium mt-2 mb-3 group-hover:opacity-70 transition-all duration-200 ease-in-out"
-                  style={{ color: "var(--color-text)" }}
-                >
-                  {article.title[locale as "de" | "en"]}
-                </h2>
-                <p
-                  className="font-body text-[14px] leading-[1.75] mb-4"
-                  style={{ color: "var(--color-text-muted)" }}
-                >
-                  {article.excerpt?.[locale as "de" | "en"]}
-                </p>
                 <div className="flex items-center justify-between">
-                  <span className="font-body text-[12px]" style={{ color: "var(--color-text-muted)" }}>
+                  <span className="font-body text-xs" style={{ color: "var(--color-text-muted)" }}>
                     {article.publishedAt &&
                       new Date(article.publishedAt).toLocaleDateString(
-                        locale === "de" ? "de-DE" : "en-US"
+                        locale === "de" ? "de-DE" : "en-US",
+                        { year: "numeric", month: "short", day: "numeric" }
                       )}
                   </span>
                   <span
-                    className="font-body text-[13px] font-medium"
-                    style={{ color: "var(--color-accent)" }}
+                    className="font-body text-sm font-medium"
+                    style={{ color: "var(--color-primary)" }}
                   >
-                    {t("readMore")} →
+                    {t("readMore")} &rarr;
                   </span>
                 </div>
               </div>

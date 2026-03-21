@@ -11,14 +11,12 @@ const category = {
         { name: "de", title: "Deutsch", type: "string" },
         { name: "en", title: "English", type: "string" },
       ],
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
       options: { source: "title.en", maxLength: 96 },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
     },
     {
       name: "description",
@@ -29,10 +27,17 @@ const category = {
         { name: "en", title: "English", type: "text", rows: 3 },
       ],
     },
+    {
+      name: "color",
+      title: "Color (Hex)",
+      type: "string",
+      description: "Hex color for UI display, e.g. #3B6853",
+    },
   ],
   preview: {
     select: {
       title: "title.en",
+      subtitle: "title.de",
     },
   },
 };

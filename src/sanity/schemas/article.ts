@@ -11,14 +11,12 @@ const article = {
         { name: "de", title: "Deutsch", type: "string" },
         { name: "en", title: "English", type: "string" },
       ],
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
       options: { source: "title.en", maxLength: 96 },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
     },
     {
       name: "excerpt",
@@ -32,15 +30,38 @@ const article = {
     {
       name: "body",
       title: "Body",
-      type: "array",
-      of: [
-        { type: "block" },
+      type: "object",
+      fields: [
         {
-          type: "image",
-          options: { hotspot: true },
-          fields: [
-            { name: "alt", title: "Alt Text", type: "string" },
-            { name: "caption", title: "Caption", type: "string" },
+          name: "de",
+          title: "Deutsch",
+          type: "array",
+          of: [
+            { type: "block" },
+            {
+              type: "image",
+              options: { hotspot: true },
+              fields: [
+                { name: "alt", title: "Alt Text", type: "string" },
+                { name: "caption", title: "Caption", type: "string" },
+              ],
+            },
+          ],
+        },
+        {
+          name: "en",
+          title: "English",
+          type: "array",
+          of: [
+            { type: "block" },
+            {
+              type: "image",
+              options: { hotspot: true },
+              fields: [
+                { name: "alt", title: "Alt Text", type: "string" },
+                { name: "caption", title: "Caption", type: "string" },
+              ],
+            },
           ],
         },
       ],
@@ -50,6 +71,7 @@ const article = {
       title: "Featured Image",
       type: "image",
       options: { hotspot: true },
+      fields: [{ name: "alt", title: "Alt Text", type: "string" }],
     },
     {
       name: "category",
@@ -70,12 +92,12 @@ const article = {
       type: "string",
       options: {
         list: [
-          { title: "Head", value: "head" },
-          { title: "Chest", value: "chest" },
-          { title: "Abdomen", value: "abdomen" },
-          { title: "Back", value: "back" },
-          { title: "Limbs", value: "limbs" },
-          { title: "Whole Body", value: "whole-body" },
+          { title: "Kopf / Head", value: "head" },
+          { title: "Brust / Chest", value: "chest" },
+          { title: "Bauch / Abdomen", value: "abdomen" },
+          { title: "Rücken / Back", value: "back" },
+          { title: "Gliedmaßen / Limbs", value: "limbs" },
+          { title: "Ganzer Körper / Whole Body", value: "whole-body" },
         ],
       },
     },
@@ -85,19 +107,49 @@ const article = {
       type: "string",
       options: {
         list: [
-          { title: "Spring", value: "spring" },
-          { title: "Summer", value: "summer" },
-          { title: "Late Summer", value: "late-summer" },
-          { title: "Autumn", value: "autumn" },
+          { title: "Frühling / Spring", value: "spring" },
+          { title: "Sommer / Summer", value: "summer" },
+          { title: "Spätsommer / Late Summer", value: "late-summer" },
+          { title: "Herbst / Autumn", value: "autumn" },
           { title: "Winter", value: "winter" },
-          { title: "All Seasons", value: "all" },
+          { title: "Alle / All Seasons", value: "all" },
         ],
       },
+    },
+    {
+      name: "readingTime",
+      title: "Reading Time (minutes)",
+      type: "number",
     },
     {
       name: "publishedAt",
       title: "Published At",
       type: "datetime",
+    },
+    {
+      name: "seoTitle",
+      title: "SEO Title",
+      type: "object",
+      fields: [
+        { name: "de", title: "Deutsch", type: "string" },
+        { name: "en", title: "English", type: "string" },
+      ],
+    },
+    {
+      name: "seoDescription",
+      title: "SEO Description",
+      type: "object",
+      fields: [
+        { name: "de", title: "Deutsch", type: "text", rows: 2 },
+        { name: "en", title: "English", type: "text", rows: 2 },
+      ],
+    },
+  ],
+  orderings: [
+    {
+      title: "Published Date, New",
+      name: "publishedAtDesc",
+      by: [{ field: "publishedAt", direction: "desc" }],
     },
   ],
   preview: {

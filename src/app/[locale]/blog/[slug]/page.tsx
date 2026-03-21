@@ -1,9 +1,13 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { PortableText } from "@portabletext/react";
-import { getArticleBySlug, getArticles } from "@/sanity/queries";
+import Image from "next/image";
+import { getArticleBySlug, getAllArticles } from "@/sanity/queries";
+import { urlFor } from "@/sanity/client";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+
+export const revalidate = 60;
 
 type Props = {
   params: { locale: string; slug: string };
@@ -11,7 +15,7 @@ type Props = {
 
 export async function generateStaticParams() {
   try {
-    const articles = await getArticles();
+    const articles = await getAllArticles();
     return articles.map((article) => ({ slug: article.slug.current }));
   } catch {
     return [];
@@ -20,12 +24,13 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = params;
+  const loc = locale as "de" | "en";
   try {
     const article = await getArticleBySlug(slug);
     if (!article) return {};
 
-    const title = article.title[locale as "de" | "en"];
-    const description = article.excerpt?.[locale as "de" | "en"] || "";
+    const title = article.seoTitle?.[loc] || article.title[loc];
+    const description = article.seoDescription?.[loc] || article.excerpt?.[loc] || "";
     const baseUrl = "https://shifuhealth.com";
 
     return {
@@ -52,6 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticlePage({ params }: Props) {
   const { locale, slug } = params;
+  const loc = locale as "de" | "en";
   const t = await getTranslations("blog");
 
   let article;
@@ -63,40 +69,63 @@ export default async function ArticlePage({ params }: Props) {
 
   if (!article) notFound();
 
+  // Get body content for the current locale
+  const bodyContent = article.body?.[loc] || article.body?.de || [];
+
   return (
-    <article className="mx-auto max-w-3xl px-5 py-16">
+    <article className="mx-auto max-w-3xl px-6 pt-28 pb-24">
       <Link
         href="/blog"
-        className="font-body text-[13px] font-medium mb-8 inline-block transition-all duration-200 ease-in-out hover:opacity-70"
-        style={{ color: "var(--color-accent)" }}
+        className="font-body text-sm font-medium mb-8 inline-block transition-colors duration-200 hover:text-[var(--color-text-body)]"
+        style={{ color: "var(--color-primary)" }}
       >
-        ← {t("title")}
+        &larr; {t("title")}
       </Link>
 
       {article.category && (
         <span
-          className="block font-body text-[12px] font-medium uppercase tracking-wider mb-2"
-          style={{ color: "var(--color-primary-lt)" }}
+          className="block font-body text-xs font-semibold px-2.5 py-1 rounded-lg mb-4 w-fit"
+          style={{
+            backgroundColor: "var(--color-primary-10)",
+            color: "var(--color-primary)",
+          }}
         >
-          {article.category.title[locale as "de" | "en"]}
+          {article.category.title[loc]}
         </span>
       )}
 
-      <h1
-        className="font-body text-[28px] md:text-[42px] font-bold mb-4"
-        style={{ color: "var(--color-text)" }}
-      >
-        {article.title[locale as "de" | "en"]}
+      <h1 className="mb-4">
+        {article.title[loc]}
       </h1>
 
-      {article.publishedAt && (
-        <p className="font-body text-[13px] mb-8" style={{ color: "var(--color-text-muted)" }}>
-          {t("publishedAt")}{" "}
-          {new Date(article.publishedAt).toLocaleDateString(
-            locale === "de" ? "de-DE" : "en-US",
-            { year: "numeric", month: "long", day: "numeric" }
-          )}
-        </p>
+      <div className="flex items-center gap-4 mb-8">
+        {article.publishedAt && (
+          <p className="font-body text-sm" style={{ color: "var(--color-text-muted)" }}>
+            {t("publishedAt")}{" "}
+            {new Date(article.publishedAt).toLocaleDateString(
+              locale === "de" ? "de-DE" : "en-US",
+              { year: "numeric", month: "long", day: "numeric" }
+            )}
+          </p>
+        )}
+        {article.readingTime && (
+          <span className="font-body text-sm" style={{ color: "var(--color-text-muted)" }}>
+            &middot; {article.readingTime} min
+          </span>
+        )}
+      </div>
+
+      {article.featuredImage && (
+        <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden mb-10">
+          <Image
+            src={urlFor(article.featuredImage).width(1200).height(600).url()}
+            alt={article.featuredImage.alt || article.title[loc]}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
       )}
 
       {article.symptomTags && article.symptomTags.length > 0 && (
@@ -104,9 +133,9 @@ export default async function ArticlePage({ params }: Props) {
           {article.symptomTags.map((tag) => (
             <span
               key={tag}
-              className="rounded-btn px-3 py-1 font-body text-[12px]"
+              className="rounded-full px-3 py-1.5 font-body text-xs"
               style={{
-                backgroundColor: "var(--color-surface)",
+                backgroundColor: "transparent",
                 color: "var(--color-text-muted)",
                 border: "1px solid var(--color-border)",
               }}
@@ -117,9 +146,14 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       )}
 
-      <div className="prose prose-lg max-w-none font-body" style={{ color: "var(--color-text)" }}>
-        {article.body && (
-          <PortableText value={article.body as Array<Record<string, unknown> & { _type: string; _key: string }>} />
+      <div
+        className="prose prose-lg max-w-none font-body leading-relaxed"
+        style={{ color: "var(--color-text-body)" }}
+      >
+        {bodyContent && Array.isArray(bodyContent) && bodyContent.length > 0 && (
+          <PortableText
+            value={bodyContent as Array<Record<string, unknown> & { _type: string; _key: string }>}
+          />
         )}
       </div>
     </article>
