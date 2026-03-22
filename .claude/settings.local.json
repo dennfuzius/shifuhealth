@@ -52,7 +52,8 @@
       "Bash(node -e \"const r = require\\(''react''\\); console.log\\(''useEffectEvent:'', typeof r.useEffectEvent\\)\")",
       "Bash(node -e \"import\\(''react''\\).then\\(r => console.log\\(''ESM useEffectEvent:'', typeof r.useEffectEvent\\)\\)\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/de)",
-      "Bash(node -e \"process.stdin.on\\(''''data'''',d=>{const v=JSON.parse\\(d\\);console.log\\(v.slice\\(-3\\).join\\(''''\\\\n''''\\)\\)}\\)\")"
+      "Bash(node -e \"process.stdin.on\\(''''data'''',d=>{const v=JSON.parse\\(d\\);console.log\\(v.slice\\(-3\\).join\\(''''\\\\n''''\\)\\)}\\)\")",
+      "Bash(node -e \"const l=require\\(''/Users/godennis/Desktop/shifuhealth/package-lock.json''\\); console.log\\(''next-sanity:'', l.packages[''node_modules/next-sanity'']?.version\\); console.log\\(''next:'', l.packages[''node_modules/next'']?.version\\); console.log\\(''react:'', l.packages[''node_modules/react'']?.version\\)\")"
     ]
   }
 }
