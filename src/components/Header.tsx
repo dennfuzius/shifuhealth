@@ -29,10 +29,10 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-6 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <span
-            className="font-heading text-[20px] font-semibold"
+            className="font-logo text-[20px] font-semibold"
             style={{ color: "var(--color-text-body)", letterSpacing: "-0.5px" }}
           >
-            ShifuHealth
+            Shifu Health
           </span>
         </Link>
 

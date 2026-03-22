@@ -104,7 +104,7 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
                   src="/images/hero-tcm.jpg"
-                  alt="Traditional Chinese Medicine — herbal healing and wellness"
+                  alt="Traditional Chinese Medicine - herbal healing and wellness"
                   width={800} height={600}
                   className="w-full h-auto object-cover"
                   style={{ aspectRatio: "4/3" }}

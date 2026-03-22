@@ -25,7 +25,7 @@ const config: Config = {
         "text-muted": "var(--color-text-muted)",
       },
       fontFamily: {
-        heading: ["var(--font-heading)"],
+        logo: ["var(--font-logo)"],
         body: ["var(--font-body)"],
       },
       borderRadius: {

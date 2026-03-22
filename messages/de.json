@@ -15,13 +15,13 @@
     "en": "English"
   },
   "hero": {
-    "title": "Die Weisheit der Traditionellen Chinesischen Medizin \u2014 f\u00fcr dein modernes Leben",
+    "title": "Die Weisheit der Traditionellen Chinesischen Medizin - f\u00fcr dein modernes Leben",
     "subtitle": "Entdecke uralte Heilkunst neu. Shifu Qi begleitet dich auf dem Weg zu Gesundheit und Balance.",
     "ctaPrimary": "Shifu Qi fragen",
     "ctaSecondary": "Blog lesen",
     "trust1": "Kein Arztbesuch n\u00f6tig",
     "trust2": "Auf Deutsch & Englisch",
-    "trust3": "Gef\u00fchrt von Shifu Qi, TCM-Meister",
+    "trust3": "Wissen von Shifu Qi",
     "seoText": "ShifuHealth vereint das jahrtausendealte Wissen der Traditionellen Chinesischen Medizin (TCM) \u2013 ein \u00fcber 2.500 Jahre altes Heilsystem aus China \u2013 mit dem tiefen Erfahrungsschatz von Shifu Qi."
   },
   "trust": {
@@ -35,15 +35,15 @@
     "qi_text": "Qi ist die vitale Lebensenergie, die durch deinen K\u00f6rper flie\u00dft. Wenn Qi frei und ausgeglichen flie\u00dft, f\u00fchlst du dich gesund und voller Energie. Blockaden k\u00f6nnen zu Beschwerden f\u00fchren.",
     "qi_quote": "\u201EWo Qi flie\u00dft, folgt Gesundheit.\u201C",
     "yinyang_title": "Yin & Yang",
-    "yinyang_text": "Zwei gegens\u00e4tzliche, aber sich erg\u00e4nzende Kr\u00e4fte \u2014 wie Ruhe und Aktivit\u00e4t, K\u00e4lte und W\u00e4rme. Gesundheit entsteht, wenn Yin und Yang im Gleichgewicht sind.",
-    "yinyang_quote": "\u201EBalance ist kein Zustand \u2014 es ist ein Tanz.\u201C",
+    "yinyang_text": "Zwei gegens\u00e4tzliche, aber sich erg\u00e4nzende Kr\u00e4fte - wie Ruhe und Aktivit\u00e4t, K\u00e4lte und W\u00e4rme. Gesundheit entsteht, wenn Yin und Yang im Gleichgewicht sind.",
+    "yinyang_quote": "\u201EBalance ist kein Zustand - es ist ein Tanz.\u201C",
     "elements_title": "Die f\u00fcnf Elemente",
-    "elements_text": "Holz, Feuer, Erde, Metall und Wasser \u2014 f\u00fcnf Wandlungsphasen, die Organe, Emotionen und Jahreszeiten miteinander verbinden.",
+    "elements_text": "Holz, Feuer, Erde, Metall und Wasser - f\u00fcnf Wandlungsphasen, die Organe, Emotionen und Jahreszeiten miteinander verbinden.",
     "elements_quote": "\u201EAlles ist miteinander verbunden.\u201C"
   },
   "shifuQi": {
     "title": "Dein pers\u00f6nlicher TCM-Experte: Shifu Qi",
-    "body": "Beschreibe deine Beschwerden \u2014 Shifu Qi analysiert sie nach den Prinzipien der TCM und gibt dir fundierte Empfehlungen, zugeschnitten auf dein individuelles Muster.",
+    "body": "Beschreibe deine Beschwerden - Shifu Qi analysiert sie nach den Prinzipien der TCM und gibt dir fundierte Empfehlungen, zugeschnitten auf dein individuelles Muster.",
     "cta": "Jetzt Shifu Qi fragen",
     "bullet1": "Analysiert dein Muster nach TCM-Prinzipien",
     "bullet2": "Empfiehlt Kr\u00e4uter, Ern\u00e4hrung & \u00dcbungen",
@@ -61,7 +61,7 @@
     "article1Excerpt": "Erfahre, welche Lebensmittel nach der Traditionellen Chinesischen Medizin dein Yang st\u00e4rken...",
     "article2Cat": "Kr\u00e4uter",
     "article2Title": "Die 5 wichtigsten TCM-Kr\u00e4uter f\u00fcr den Alltag",
-    "article2Excerpt": "Von Astragalus bis Goji-Beere \u2014 diese Heilkr\u00e4uter der TCM solltest du kennen...",
+    "article2Excerpt": "Von Astragalus bis Goji-Beere - diese Heilkr\u00e4uter der TCM solltest du kennen...",
     "article3Cat": "Grundlagen",
     "article3Title": "Qi verstehen: Die Lebensenergie der TCM",
     "article3Excerpt": "Was ist Qi wirklich? Ein verst\u00e4ndlicher Einstieg in das Herzst\u00fcck der Traditionellen Chinesischen Medizin..."
@@ -100,6 +100,10 @@
     "cta": "Anmelden",
     "privacy": "Kein Spam. Jederzeit abmeldbar."
   },
+  "legal": {
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
+  },
   "footer": {
     "tagline": "Dein Wegweiser f\u00fcr ganzheitliche Gesundheit mit Traditioneller Chinesischer Medizin.",
     "blog": "Blog",
@@ -115,13 +119,13 @@
     "publishedAt": "Ver\u00f6ffentlicht am"
   },
   "assistant": {
-    "title": "Shifu Qi \u2014 Dein TCM-Experte",
+    "title": "Shifu Qi - Dein TCM-Experte",
     "subtitle": "Beschreibe deine Beschwerden. Shifu Qi erkl\u00e4rt sie nach den Prinzipien der Traditionellen Chinesischen Medizin und gibt dir fundierte Empfehlungen.",
     "placeholder": "Stelle deine Frage...",
     "metaTitle": "Shifu Qi \u2013 Dein TCM-Experte f\u00fcr Traditionelle Chinesische Medizin | ShifuHealth",
-    "metaDescription": "Frage Shifu Qi \u2014 deinen pers\u00f6nlichen TCM-Experten. Erhalte fundierte Empfehlungen zu Ern\u00e4hrung, Kr\u00e4utern und Lebensstil nach den Prinzipien der Traditionellen Chinesischen Medizin.",
+    "metaDescription": "Frage Shifu Qi - deinen pers\u00f6nlichen TCM-Experten. Erhalte fundierte Empfehlungen zu Ern\u00e4hrung, Kr\u00e4utern und Lebensstil nach den Prinzipien der Traditionellen Chinesischen Medizin.",
     "infoCard1Title": "Wie funktioniert Shifu Qi?",
-    "infoCard1Text": "Shifu Qi nutzt eine umfangreiche TCM-Wissensbasis und erkl\u00e4rt deine Symptome nach den Prinzipien der Traditionellen Chinesischen Medizin \u2014 verst\u00e4ndlich und fundiert.",
+    "infoCard1Text": "Shifu Qi nutzt eine umfangreiche TCM-Wissensbasis und erkl\u00e4rt deine Symptome nach den Prinzipien der Traditionellen Chinesischen Medizin - verst\u00e4ndlich und fundiert.",
     "infoCard2Title": "Ist das echte medizinische Beratung?",
     "infoCard2Text": "Nein. Shifu Qi bietet TCM-Wissen zur Orientierung, ersetzt aber keinen Arztbesuch. Bei ernsthaften Beschwerden empfehlen wir einen qualifizierten TCM-Praktiker.",
     "infoCard3Title": "In welchen Sprachen?",
@@ -130,7 +134,7 @@
   "chat": {
     "label": "Shifu Qi fragen",
     "online": "TCM-Experte \u00b7 Online",
-    "welcome": "Willkommen. Ich bin Shifu Qi \u2014 dein pers\u00f6nlicher TCM-Begleiter. Beschreibe deine Beschwerden und ich erkl\u00e4re sie aus der Sicht der Traditionellen Chinesischen Medizin.",
+    "welcome": "Willkommen. Ich bin Shifu Qi - dein pers\u00f6nlicher TCM-Begleiter. Beschreibe deine Beschwerden und ich erkl\u00e4re sie aus der Sicht der Traditionellen Chinesischen Medizin.",
     "inputPlaceholder": "Schreibe Shifu Qi...",
     "disclaimer": "\u262f Kein Ersatz f\u00fcr medizinischen Rat",
     "demoNote": "\u2726 Shifu Qi ist bald f\u00fcr dich da",

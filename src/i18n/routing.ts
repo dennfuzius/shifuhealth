@@ -15,6 +15,14 @@ export const routing = defineRouting({
       de: "/ueber-tcm",
       en: "/about-tcm",
     },
+    "/impressum": {
+      de: "/impressum",
+      en: "/imprint",
+    },
+    "/datenschutz": {
+      de: "/datenschutz",
+      en: "/privacy",
+    },
   },
 });
 

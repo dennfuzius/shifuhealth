@@ -29,7 +29,7 @@ const components: PortableTextComponents = {
     ),
     blockquote: ({ children }) => (
       <blockquote
-        className="font-heading italic my-8"
+        className="font-body italic my-8"
         style={{
           borderLeft: "3px solid var(--color-gold)",
           paddingLeft: "1rem",
