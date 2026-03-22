@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 
 type Props = {
-  params: { locale: string; slug: string };
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
   const loc = locale as "de" | "en";
   try {
     const article = await getArticleBySlug(slug);
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
   const loc = locale as "de" | "en";
   const t = await getTranslations("blog");
 

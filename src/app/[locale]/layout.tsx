@@ -9,7 +9,7 @@ import FloatingChat from "@/components/FloatingChat";
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateStaticParams() {
@@ -19,9 +19,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = params;
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
   const baseUrl = "https://www.shifuhealth.com";
 
@@ -52,7 +52,7 @@ export async function generateMetadata({
           url: `${baseUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: "ShifuHealth – Traditional Chinese Medicine",
+          alt: "ShifuHealth \u2013 Traditional Chinese Medicine",
         },
       ],
     },
@@ -70,7 +70,7 @@ export async function generateMetadata({
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = params;
+  const { locale } = await params;
   const messages = await getMessages();
   const baseUrl = "https://www.shifuhealth.com";
 
