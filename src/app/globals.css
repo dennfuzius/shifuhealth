@@ -28,7 +28,7 @@
   --el-water: #386694;
 
   /* ── Typography ── */
-  --font-heading: 'Noto Serif', Georgia, serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
   /* ── Shadows ── */
@@ -58,10 +58,10 @@
   }
 
   h1, h2, h3 {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     color: var(--color-text);
     line-height: 1.1;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   h1 {

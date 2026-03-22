@@ -69,7 +69,7 @@ export default async function BlogPreview() {
                       </span>
                     )}
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">
+                  <h3 className="font-body text-xl font-semibold mb-2">
                     {article.title[locale]}
                   </h3>
                   {article.excerpt?.[locale] && (

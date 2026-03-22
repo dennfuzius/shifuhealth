@@ -80,7 +80,7 @@ export default async function BlogPage() {
                     </span>
                   )}
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-[var(--color-primary)] transition-colors duration-200">
+                <h3 className="font-body text-xl font-semibold mb-2 group-hover:text-[var(--color-primary)] transition-colors duration-200">
                   {article.title[locale]}
                 </h3>
                 {article.excerpt?.[locale] && (

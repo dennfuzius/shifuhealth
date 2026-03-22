@@ -93,7 +93,7 @@ export default function AssistantPage() {
               <div className="icon-container mb-5">
                 {card.icon}
               </div>
-              <h3 className="font-heading text-xl font-semibold mb-2">
+              <h3 className="font-body text-xl font-semibold mb-2">
                 {t(card.titleKey)}
               </h3>
               <p

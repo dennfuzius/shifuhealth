@@ -118,7 +118,7 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
               >
                 <div className="icon-container"><IconQi /></div>
                 <div>
-                  <p className="font-heading text-sm font-semibold" style={{ color: "var(--color-text)" }}>2.500+</p>
+                  <p className="font-body text-sm font-semibold" style={{ color: "var(--color-text)" }}>2.500+</p>
                   <p className="font-body text-xs" style={{ color: "var(--color-text-muted)" }}>{t("trust.item1")}</p>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
               <ScrollAnimator key={i}>
                 <div className="card p-8 hover:shadow-md transition-shadow duration-300">
                   <div className="icon-container mb-5">{item.icon}</div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">
+                  <h3 className="font-body text-xl font-semibold mb-3">
                     {t(`tcmIntro.${item.titleKey}` as "tcmIntro.qi_title")}
                   </h3>
                   <p className="font-body text-base leading-relaxed mb-4" style={{ color: "var(--color-text-secondary)" }}>
@@ -218,7 +218,7 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
                   color: "var(--color-text-body)",
                 }}
               >
-                <span className="font-heading text-lg" style={{ color: el.color }}>
+                <span className="font-body text-lg" style={{ color: el.color }}>
                   {t(`fiveElements.${el.key}Symbol` as "fiveElements.woodSymbol")}
                 </span>
                 {t(`fiveElements.${el.key}` as "fiveElements.wood")}
@@ -228,10 +228,10 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
           <div className="max-w-2xl mx-auto">
             <div className="card p-8 md:p-12" style={{ border: "1px solid rgba(226, 219, 213, 0.4)" }}>
               <div className="text-center mb-6">
-                <span className="font-heading text-5xl block mb-2" style={{ color: activeEl.color, opacity: 0.3 }}>
+                <span className="font-body text-5xl block mb-2" style={{ color: activeEl.color, opacity: 0.3 }}>
                   {t(`fiveElements.${activeElement}Symbol` as "fiveElements.woodSymbol")}
                 </span>
-                <h3 className="font-heading text-2xl font-semibold mb-2">
+                <h3 className="font-body text-2xl font-semibold mb-2">
                   {t(`fiveElements.${activeElement}` as "fiveElements.wood")}
                 </h3>
               </div>

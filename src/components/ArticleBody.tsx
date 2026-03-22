@@ -13,7 +13,7 @@ const components: PortableTextComponents = {
     ),
     h2: ({ children }) => (
       <h2
-        className="font-heading font-semibold"
+        className="font-body font-bold"
         style={{ marginTop: "3rem", marginBottom: "1rem", lineHeight: 1.2 }}
       >
         {children}
@@ -21,7 +21,7 @@ const components: PortableTextComponents = {
     ),
     h3: ({ children }) => (
       <h3
-        className="font-heading font-semibold"
+        className="font-body font-bold"
         style={{ marginTop: "2rem", marginBottom: "0.75rem", lineHeight: 1.3 }}
       >
         {children}
@@ -47,7 +47,7 @@ const components: PortableTextComponents = {
       <strong style={{ fontWeight: 500, color: "var(--color-text)" }}>{children}</strong>
     ),
     em: ({ children }) => (
-      <em className="font-heading" style={{ fontStyle: "italic" }}>{children}</em>
+      <em className="font-body" style={{ fontStyle: "italic" }}>{children}</em>
     ),
     link: ({ value, children }) => (
       <a
