@@ -12,7 +12,10 @@ const flags: Record<string, string> = {
 export default function LanguageSwitcher() {
   const locale = useLocale();
   const t = useTranslations("lang");
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  // Fall back to "/" for dynamic routes with params (e.g. /blog/my-slug)
+  // usePathname returns the matched route pattern, not the actual path
+  const pathname = rawPathname.includes("[") ? "/" : rawPathname;
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
