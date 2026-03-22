@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { getArticleBySlug, getAllArticles } from "@/sanity/queries";
 import { urlFor } from "@/sanity/client";
 import { Link } from "@/i18n/navigation";
+import ArticleBody from "@/components/ArticleBody";
 import type { Metadata } from "next";
 
 export const revalidate = 60;
@@ -69,92 +69,109 @@ export default async function ArticlePage({ params }: Props) {
 
   if (!article) notFound();
 
-  // Get body content for the current locale
   const bodyContent = article.body?.[loc] || article.body?.de || [];
 
   return (
-    <article className="mx-auto max-w-3xl px-6 pt-28 pb-24">
-      <Link
-        href="/blog"
-        className="font-body text-sm font-medium mb-8 inline-block transition-colors duration-200 hover:text-[var(--color-text-body)]"
-        style={{ color: "var(--color-primary)" }}
-      >
-        &larr; {t("title")}
-      </Link>
-
-      {article.category && (
-        <span
-          className="block font-body text-xs font-semibold px-2.5 py-1 rounded-lg mb-4 w-fit"
-          style={{
-            backgroundColor: "var(--color-primary-10)",
-            color: "var(--color-primary)",
-          }}
+    <article className="pt-28 pb-24">
+      {/* ── Article Header ── */}
+      <header className="mx-auto px-6" style={{ maxWidth: 720 }}>
+        <Link
+          href="/blog"
+          className="font-body text-sm font-medium mb-10 inline-block transition-colors duration-200 hover:text-[var(--color-text-body)]"
+          style={{ color: "var(--color-primary)" }}
         >
-          {article.category.title[loc]}
-        </span>
-      )}
+          &larr; {t("title")}
+        </Link>
 
-      <h1 className="mb-4">
-        {article.title[loc]}
-      </h1>
-
-      <div className="flex items-center gap-4 mb-8">
-        {article.publishedAt && (
-          <p className="font-body text-sm" style={{ color: "var(--color-text-muted)" }}>
-            {t("publishedAt")}{" "}
-            {new Date(article.publishedAt).toLocaleDateString(
-              locale === "de" ? "de-DE" : "en-US",
-              { year: "numeric", month: "long", day: "numeric" }
-            )}
-          </p>
-        )}
-        {article.readingTime && (
-          <span className="font-body text-sm" style={{ color: "var(--color-text-muted)" }}>
-            &middot; {article.readingTime} min
-          </span>
-        )}
-      </div>
-
-      {article.featuredImage && (
-        <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden mb-10">
-          <Image
-            src={urlFor(article.featuredImage).width(1200).height(600).url()}
-            alt={article.featuredImage.alt || article.title[loc]}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
-            priority
-          />
-        </div>
-      )}
-
-      {article.symptomTags && article.symptomTags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-8">
-          {article.symptomTags.map((tag) => (
+        {/* Meta row: category + reading time */}
+        <div className="flex items-center gap-3 mb-5">
+          {article.category && (
             <span
-              key={tag}
-              className="rounded-full px-3 py-1.5 font-body text-xs"
+              className="font-body text-xs font-semibold px-2.5 py-1 rounded-lg"
               style={{
-                backgroundColor: "transparent",
-                color: "var(--color-text-muted)",
-                border: "1px solid var(--color-border)",
+                backgroundColor: "var(--color-primary-10)",
+                color: "var(--color-primary)",
               }}
             >
-              {tag}
+              {article.category.title[loc]}
             </span>
-          ))}
+          )}
+          {article.readingTime && (
+            <span className="font-body text-xs" style={{ color: "var(--color-text-muted)" }}>
+              {article.readingTime} min
+            </span>
+          )}
+        </div>
+
+        {/* Title */}
+        <h1
+          className="font-body font-bold mb-5"
+          style={{
+            fontSize: "clamp(1.5rem, 4vw, 2.25rem)",
+            lineHeight: 1.2,
+            color: "var(--color-text)",
+          }}
+        >
+          {article.title[loc]}
+        </h1>
+
+        {/* Author + date */}
+        <div className="flex items-center gap-2 mb-10 flex-wrap">
+          {article.publishedAt && (
+            <span className="font-body text-sm" style={{ color: "var(--color-text-muted)" }}>
+              {new Date(article.publishedAt).toLocaleDateString(
+                locale === "de" ? "de-DE" : "en-US",
+                { year: "numeric", month: "long", day: "numeric" }
+              )}
+            </span>
+          )}
+          <span className="font-body text-sm" style={{ color: "var(--color-text-muted)" }}>
+            &middot; Von Shifu Qi &middot; ShifuHealth
+          </span>
+        </div>
+      </header>
+
+      {/* ── Featured Image ── */}
+      {article.featuredImage && (
+        <div className="mx-auto px-6 mb-12" style={{ maxWidth: 720 }}>
+          <div className="relative w-full overflow-hidden" style={{ borderRadius: 12, maxHeight: 480 }}>
+            <Image
+              src={urlFor(article.featuredImage).width(1440).height(810).url()}
+              alt={article.featuredImage.alt || article.title[loc]}
+              width={1440}
+              height={810}
+              className="w-full h-auto object-cover"
+              style={{ maxHeight: 480 }}
+              sizes="(max-width: 720px) 100vw, 720px"
+              priority
+            />
+          </div>
         </div>
       )}
 
-      <div
-        className="prose prose-lg max-w-none font-body leading-relaxed"
-        style={{ color: "var(--color-text-body)" }}
-      >
-        {bodyContent && Array.isArray(bodyContent) && bodyContent.length > 0 && (
-          <PortableText
-            value={bodyContent as Array<Record<string, unknown> & { _type: string; _key: string }>}
-          />
-        )}
+      {/* ── Symptom Tags ── */}
+      {article.symptomTags && article.symptomTags.length > 0 && (
+        <div className="mx-auto px-6 mb-10" style={{ maxWidth: 720 }}>
+          <div className="flex flex-wrap gap-2">
+            {article.symptomTags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full px-3 py-1.5 font-body text-xs"
+                style={{
+                  color: "var(--color-text-muted)",
+                  border: "1px solid var(--color-border)",
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── Article Body ── */}
+      <div className="px-6">
+        <ArticleBody content={bodyContent} />
       </div>
     </article>
   );
