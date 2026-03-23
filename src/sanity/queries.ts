@@ -29,6 +29,7 @@ export interface Category {
   slug: { current: string };
   description: { de: string; en: string };
   color: string | null;
+  image: { asset: { _ref: string }; alt?: string } | null;
 }
 
 /* ── Shared field projections ─────────────────────────── */
@@ -105,7 +106,8 @@ export async function getCategories(): Promise<Category[]> {
       title,
       slug,
       description,
-      color
+      color,
+      image
     }`,
     {},
     { next: { revalidate: 60 } }

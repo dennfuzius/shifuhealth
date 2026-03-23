@@ -1,7 +1,8 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { getAllArticles, type Article } from "@/sanity/queries";
+import { getAllArticles, getCategories, type Article, type Category } from "@/sanity/queries";
+import CategoryGrid from "@/components/CategoryGrid";
 import { urlFor } from "@/sanity/client";
 
 export const revalidate = 60;
@@ -11,8 +12,10 @@ export default async function BlogPage() {
   const locale = (await getLocale()) as "de" | "en";
 
   let articles: Article[] = [];
+  let categories: Category[] = [];
   try {
     articles = await getAllArticles();
+    categories = await getCategories();
   } catch {
     // Sanity not configured yet — show empty state
   }
@@ -32,6 +35,10 @@ export default async function BlogPage() {
           {t("subtitle")}
         </p>
       </div>
+
+      {categories.length > 0 && (
+        <CategoryGrid categories={categories} locale={locale} title={t("categories")} />
+      )}
 
       {articles.length === 0 ? (
         <div
