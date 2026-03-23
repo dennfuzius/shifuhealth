@@ -33,11 +33,25 @@ const category = {
       type: "string",
       description: "Hex color for UI display, e.g. #3B6853",
     },
+    {
+      name: "image",
+      title: "Category Image",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt Text",
+          type: "string",
+        },
+      ],
+    },
   ],
   preview: {
     select: {
       title: "title.en",
       subtitle: "title.de",
+      media: "image",
     },
   },
 };
