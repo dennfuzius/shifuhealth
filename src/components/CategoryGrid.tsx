@@ -21,7 +21,7 @@ export default function CategoryGrid({ categories, locale, title }: CategoryGrid
         {categoriesWithImages.map((cat) => (
           <Link
             key={cat._id}
-            href={{ pathname: "/blog", params: {} }}
+            href="/blog"
             className="group relative block rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             {cat.image && (
