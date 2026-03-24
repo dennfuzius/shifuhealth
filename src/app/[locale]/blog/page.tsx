@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   getAllArticles,
+  getArticlesBySlugs,
   type Article,
 } from "@/sanity/queries";
 import { urlFor } from "@/sanity/client";
@@ -23,14 +24,22 @@ export default async function BlogPage() {
   const t = await getTranslations("blog");
   const locale = (await getLocale()) as "de" | "en";
 
+  const FEATURED_SLUGS = [
+    "traditionelle-chinesische-medizin-tcm",
+    "yin-yang-einfach-erklaert-tcm",
+    "was-ist-qi-lebensenergie-erklaert",
+  ];
+
   let articles: Article[] = [];
+  let featured: Article[] = [];
   try {
-    articles = await getAllArticles();
+    [articles, featured] = await Promise.all([
+      getAllArticles(),
+      getArticlesBySlugs(FEATURED_SLUGS),
+    ]);
   } catch {
     // Sanity not configured yet
   }
-
-  const featured = articles.slice(0, 3);
 
   // Build category data for client filter
   const categories = CATEGORIES.map((cat) => ({
@@ -84,7 +93,7 @@ export default async function BlogPage() {
             >
               {t("featuredTitle")}
             </h2>
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featured.map((article) => (
                 <Link
                   key={article._id}
@@ -92,14 +101,14 @@ export default async function BlogPage() {
                     pathname: "/blog/[slug]",
                     params: { slug: article.slug.current },
                   }}
-                  className="group flex flex-col md:flex-row gap-6 rounded-card overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+                  className="group block rounded-card overflow-hidden transition-shadow duration-300 hover:shadow-lg"
                   style={{
                     backgroundColor: "var(--color-card)",
                     border: "1px solid var(--color-border)",
                   }}
                 >
                   {article.featuredImage && (
-                    <div className="relative md:w-[40%] h-52 md:h-auto min-h-[200px] overflow-hidden flex-shrink-0">
+                    <div className="relative h-52 overflow-hidden">
                       <Image
                         src={urlFor(article.featuredImage)
                           .width(600)
@@ -110,12 +119,12 @@ export default async function BlogPage() {
                         }
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        sizes="(max-width: 768px) 100vw, 40vw"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                   )}
-                  <div className="flex-1 p-6 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 mb-3">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
                       {article.category && (
                         <span
                           className="font-body text-xs font-semibold px-2.5 py-1 rounded-lg"
@@ -136,12 +145,12 @@ export default async function BlogPage() {
                         </span>
                       )}
                     </div>
-                    <h2 className="font-body text-lg md:text-xl font-bold mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    <h2 className="font-body text-lg font-bold mb-2 group-hover:text-[var(--color-primary)] transition-colors">
                       {article.title[locale]}
                     </h2>
                     {article.excerpt?.[locale] && (
                       <p
-                        className="font-body text-sm mb-4 line-clamp-2"
+                        className="font-body text-sm mb-4 line-clamp-3"
                         style={{
                           color: "var(--color-text-secondary)",
                           lineHeight: 1.6,

@@ -99,6 +99,20 @@ export async function getFeaturedArticles(limit: number = 3): Promise<Article[]>
   );
 }
 
+export async function getArticlesBySlugs(slugs: string[]): Promise<Article[]> {
+  const articles = await client.fetch(
+    `*[_type == "article" && slug.current in $slugs] {
+      ${articleListFields}
+    }`,
+    { slugs },
+    { next: { revalidate: 60 } }
+  );
+  // Return in the order of the input slugs
+  return slugs
+    .map((slug) => articles.find((a: Article) => a.slug.current === slug))
+    .filter(Boolean) as Article[];
+}
+
 export async function getCategories(): Promise<Category[]> {
   return client.fetch(
     `*[_type == "category"] | order(title.en asc) {

@@ -1,7 +1,7 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { getFeaturedArticles, type Article } from "@/sanity/queries";
+import { getArticlesBySlugs, type Article } from "@/sanity/queries";
 import { urlFor } from "@/sanity/client";
 import ScrollAnimator from "./ScrollAnimator";
 
@@ -9,9 +9,15 @@ export default async function BlogPreview() {
   const t = await getTranslations("blogPreview");
   const locale = (await getLocale()) as "de" | "en";
 
+  const FEATURED_SLUGS = [
+    "traditionelle-chinesische-medizin-tcm",
+    "yin-yang-einfach-erklaert-tcm",
+    "was-ist-qi-lebensenergie-erklaert",
+  ];
+
   let articles: Article[] = [];
   try {
-    articles = await getFeaturedArticles(3);
+    articles = await getArticlesBySlugs(FEATURED_SLUGS);
   } catch {
     // Sanity not configured or no articles
   }
