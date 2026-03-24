@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { createClient } from "@/lib/supabase/server";
+import { AuthProvider } from "@/lib/auth/auth-context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingChat from "@/components/FloatingChat";
@@ -74,6 +76,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
   const baseUrl = "https://www.shifuhealth.com";
 
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -107,10 +114,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body className="min-h-screen flex flex-col" style={{ backgroundColor: "var(--color-bg)" }}>
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <FloatingChat />
+          <AuthProvider initialUser={user}>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <FloatingChat />
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -23,6 +23,23 @@ export const routing = defineRouting({
       de: "/datenschutz",
       en: "/privacy",
     },
+    "/login": "/login",
+    "/registrieren": {
+      de: "/registrieren",
+      en: "/register",
+    },
+    "/passwort-vergessen": {
+      de: "/passwort-vergessen",
+      en: "/forgot-password",
+    },
+    "/profil": {
+      de: "/profil",
+      en: "/profile",
+    },
+    "/favoriten": {
+      de: "/favoriten",
+      en: "/favorites",
+    },
   },
 });
 

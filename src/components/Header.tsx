@@ -3,11 +3,14 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import { useAuth } from "@/lib/auth/auth-context";
 import LanguageSwitcher from "./LanguageSwitcher";
+import UserMenu from "./UserMenu";
 
 export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
+  const { user, loading } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
@@ -44,23 +47,33 @@ export default function Header() {
               href={link.href}
               className="font-body text-[14px] transition-colors duration-200 hover:text-[var(--color-text-body)]"
               style={{
-                color: pathname === link.href ? "var(--color-primary)" : "var(--color-text-muted)",
+                color:
+                  pathname === link.href
+                    ? "var(--color-primary)"
+                    : "var(--color-text-muted)",
               }}
             >
               {link.label}
             </Link>
           ))}
           <LanguageSwitcher />
-          <Link
-            href="/assistent"
-            className="font-body text-[14px] font-medium px-5 py-2 rounded-[10px] transition-colors duration-200"
-            style={{
-              backgroundColor: "var(--color-primary)",
-              color: "var(--color-primary-fg)",
-            }}
-          >
-            {t("assistant")}
-          </Link>
+
+          {/* Auth: login button or user menu */}
+          {!loading &&
+            (user ? (
+              <UserMenu />
+            ) : (
+              <Link
+                href="/login"
+                className="font-body text-[14px] font-medium px-5 py-2 rounded-[10px] transition-colors duration-200"
+                style={{
+                  border: "1.5px solid var(--color-border)",
+                  color: "var(--color-text-body)",
+                }}
+              >
+                {t("login")}
+              </Link>
+            ))}
         </nav>
 
         {/* Mobile hamburger */}
@@ -73,7 +86,9 @@ export default function Header() {
             className="block w-5 h-[2px] mb-[5px] transition-all duration-200"
             style={{
               backgroundColor: "var(--color-text-body)",
-              transform: menuOpen ? "rotate(45deg) translateY(7px)" : "none",
+              transform: menuOpen
+                ? "rotate(45deg) translateY(7px)"
+                : "none",
             }}
           />
           <span
@@ -87,7 +102,9 @@ export default function Header() {
             className="block w-5 h-[2px] transition-all duration-200"
             style={{
               backgroundColor: "var(--color-text-body)",
-              transform: menuOpen ? "rotate(-45deg) translateY(-7px)" : "none",
+              transform: menuOpen
+                ? "rotate(-45deg) translateY(-7px)"
+                : "none",
             }}
           />
         </button>
@@ -110,21 +127,35 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="font-body text-[16px] py-1"
               style={{
-                color: pathname === link.href ? "var(--color-primary)" : "var(--color-text-muted)",
+                color:
+                  pathname === link.href
+                    ? "var(--color-primary)"
+                    : "var(--color-text-muted)",
               }}
             >
               {link.label}
             </Link>
           ))}
-          <div className="pt-2 flex items-center gap-4">
+          <div
+            className="pt-2 flex items-center gap-4"
+          >
             <LanguageSwitcher />
-            <Link
-              href="/assistent"
-              onClick={() => setMenuOpen(false)}
-              className="btn-primary text-[14px] py-2 px-5"
-            >
-              {t("assistant")}
-            </Link>
+            {!loading &&
+              (user ? (
+                <UserMenu />
+              ) : (
+                <Link
+                  href="/login"
+                  onClick={() => setMenuOpen(false)}
+                  className="font-body text-[14px] font-medium px-5 py-2 rounded-[10px] transition-colors"
+                  style={{
+                    border: "1.5px solid var(--color-border)",
+                    color: "var(--color-text-body)",
+                  }}
+                >
+                  {t("login")}
+                </Link>
+              ))}
           </div>
         </nav>
       )}

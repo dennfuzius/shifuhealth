@@ -5,6 +5,7 @@ import { getArticleBySlug, getAllArticles } from "@/sanity/queries";
 import { urlFor } from "@/sanity/client";
 import { Link } from "@/i18n/navigation";
 import ArticleBody from "@/components/ArticleBody";
+import ShareRow from "@/components/ShareRow";
 import type { Metadata } from "next";
 
 export const revalidate = 60;
@@ -172,6 +173,14 @@ export default async function ArticlePage({ params }: Props) {
       {/* ── Article Body ── */}
       <div className="px-6">
         <ArticleBody content={bodyContent} />
+      </div>
+
+      {/* ── Share ── */}
+      <div className="mx-auto px-6 mt-12 pt-8" style={{ maxWidth: 720, borderTop: "1px solid var(--color-border)" }}>
+        <ShareRow
+          title={article.title[loc]}
+          url={`https://shifuhealth.com/${locale}/blog/${slug}`}
+        />
       </div>
     </article>
   );
