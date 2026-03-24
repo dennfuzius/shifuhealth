@@ -54,7 +54,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/de)",
       "Bash(node -e \"process.stdin.on\\(''''data'''',d=>{const v=JSON.parse\\(d\\);console.log\\(v.slice\\(-3\\).join\\(''''\\\\n''''\\)\\)}\\)\")",
       "Bash(node -e \"const l=require\\(''/Users/godennis/Desktop/shifuhealth/package-lock.json''\\); console.log\\(''next-sanity:'', l.packages[''node_modules/next-sanity'']?.version\\); console.log\\(''next:'', l.packages[''node_modules/next'']?.version\\); console.log\\(''react:'', l.packages[''node_modules/react'']?.version\\)\")",
-      "Bash(curl -s \"https://wuro9vba.api.sanity.io/v2024-01-01/data/query/production?query=*%5B_type%3D%3D%22article%22%5D%7B%22slug%22%3Aslug.current%2Ctitle%7D\")"
+      "Bash(curl -s \"https://wuro9vba.api.sanity.io/v2024-01-01/data/query/production?query=*%5B_type%3D%3D%22article%22%5D%7B%22slug%22%3Aslug.current%2Ctitle%7D\")",
+      "Bash(node /Users/godennis/Desktop/shifuhealth/scripts/update-categories.mjs)"
     ]
   }
 }

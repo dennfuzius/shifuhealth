@@ -15,7 +15,6 @@ export default function Header() {
 
   const links = [
     { href: "/blog" as const, label: t("blog") },
-    { href: "/assistent" as const, label: t("assistant") },
     { href: "/ueber-tcm" as const, label: t("aboutTcm") },
   ];
 
@@ -40,12 +39,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-body text-[14px] transition-colors duration-200 hover:text-[var(--color-text-body)]"
+              className="font-body text-[13px] font-medium transition-colors duration-200 hover:text-[var(--color-text-body)]"
               style={{
                 color:
                   pathname === link.href
@@ -56,19 +55,53 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+
+          {/* Shifu Qi pill button */}
+          <Link
+            href="/assistent"
+            className="inline-flex items-center gap-1.5 font-body text-[13px] font-medium px-4 py-1.5 rounded-full transition-all duration-200"
+            style={{
+              backgroundColor:
+                pathname === "/assistent"
+                  ? "var(--color-primary-10)"
+                  : "var(--color-surface)",
+              border: `1px solid ${pathname === "/assistent" ? "var(--color-primary)" : "var(--color-border)"}`,
+              color: "var(--color-text)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--color-primary-10)";
+              e.currentTarget.style.borderColor = "var(--color-primary)";
+            }}
+            onMouseLeave={(e) => {
+              if (pathname !== "/assistent") {
+                e.currentTarget.style.backgroundColor = "var(--color-surface)";
+                e.currentTarget.style.borderColor = "var(--color-border)";
+              }
+            }}
+          >
+            <span className="text-[14px]">&#9775;</span>
+            Shifu Qi
+          </Link>
+
           <LanguageSwitcher />
 
-          {/* Auth: login button or user menu */}
+          {/* Auth */}
           {!loading &&
             (user ? (
               <UserMenu />
             ) : (
               <Link
                 href="/login"
-                className="font-body text-[14px] font-medium px-5 py-2 rounded-[10px] transition-colors duration-200"
+                className="font-body text-[13px] font-medium px-5 py-2 rounded-[6px] transition-all duration-200"
                 style={{
-                  border: "1.5px solid var(--color-border)",
-                  color: "var(--color-text-body)",
+                  backgroundColor: "var(--color-primary)",
+                  color: "#fff",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#6b8e77";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--color-primary)";
                 }}
               >
                 {t("login")}
@@ -86,9 +119,7 @@ export default function Header() {
             className="block w-5 h-[2px] mb-[5px] transition-all duration-200"
             style={{
               backgroundColor: "var(--color-text-body)",
-              transform: menuOpen
-                ? "rotate(45deg) translateY(7px)"
-                : "none",
+              transform: menuOpen ? "rotate(45deg) translateY(7px)" : "none",
             }}
           />
           <span
@@ -102,9 +133,7 @@ export default function Header() {
             className="block w-5 h-[2px] transition-all duration-200"
             style={{
               backgroundColor: "var(--color-text-body)",
-              transform: menuOpen
-                ? "rotate(-45deg) translateY(-7px)"
-                : "none",
+              transform: menuOpen ? "rotate(-45deg) translateY(-7px)" : "none",
             }}
           />
         </button>
@@ -136,9 +165,20 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <div
-            className="pt-2 flex items-center gap-4"
+          <Link
+            href="/assistent"
+            onClick={() => setMenuOpen(false)}
+            className="inline-flex items-center gap-1.5 font-body text-[15px] font-medium py-1"
+            style={{
+              color:
+                pathname === "/assistent"
+                  ? "var(--color-primary)"
+                  : "var(--color-text-muted)",
+            }}
           >
+            <span>&#9775;</span> Shifu Qi
+          </Link>
+          <div className="pt-2 flex items-center gap-4">
             <LanguageSwitcher />
             {!loading &&
               (user ? (
@@ -147,10 +187,10 @@ export default function Header() {
                 <Link
                   href="/login"
                   onClick={() => setMenuOpen(false)}
-                  className="font-body text-[14px] font-medium px-5 py-2 rounded-[10px] transition-colors"
+                  className="font-body text-[13px] font-medium px-5 py-2 rounded-[6px]"
                   style={{
-                    border: "1.5px solid var(--color-border)",
-                    color: "var(--color-text-body)",
+                    backgroundColor: "var(--color-primary)",
+                    color: "#fff",
                   }}
                 >
                   {t("login")}

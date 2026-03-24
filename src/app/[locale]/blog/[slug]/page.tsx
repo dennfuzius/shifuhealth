@@ -130,6 +130,14 @@ export default async function ArticlePage({ params }: Props) {
             &middot; Von Shifu Qi &middot; ShifuHealth
           </span>
         </div>
+
+        {/* Top share row */}
+        <div className="mb-8">
+          <ShareRow
+            title={article.title[loc]}
+            url={`https://shifuhealth.com/${locale}/blog/${slug}`}
+          />
+        </div>
       </header>
 
       {/* ── Featured Image ── */}
