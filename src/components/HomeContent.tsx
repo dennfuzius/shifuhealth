@@ -70,13 +70,26 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="pt-20 pb-10 md:pt-24 md:pb-14" style={{ paddingTop: 72, paddingBottom: 60 }}>
+      <section style={{ paddingTop: 72, paddingBottom: 48 }}>
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="animate-fade-in-up">
+          {/* Mobile image */}
+          <div className="block md:hidden mb-6 rounded-xl overflow-hidden" style={{ height: 260 }}>
+            <Image
+              src="/images/hero-main.jpg"
+              alt="Traditionelle Chinesische Medizin - Kräuter, Tee und Heilwissen von Shifu Health"
+              width={800} height={450}
+              className="w-full h-full object-cover"
+              priority
+              sizes="100vw"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-0 md:gap-10 items-stretch">
+            {/* Text column */}
+            <div className="animate-fade-in-up flex flex-col justify-center">
               <div
-                className="w-12 h-1 rounded-full mb-8"
-                style={{ backgroundColor: "var(--color-primary)" }}
+                className="rounded-full mb-4"
+                style={{ width: 60, height: 3, backgroundColor: "var(--color-primary)" }}
               />
               <h1 className="text-balance mb-4">{t("hero.title")}</h1>
               <p
@@ -100,21 +113,22 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
                 {t("hero.seoText")}
               </p>
             </div>
-            <div className="relative hidden md:block">
-              <div className="relative overflow-hidden rounded-2xl">
+
+            {/* Desktop image column */}
+            <div className="relative hidden md:block" style={{ minHeight: 480 }}>
+              <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: 16 }}>
                 <Image
                   src="/images/hero-main.jpg"
                   alt="Traditionelle Chinesische Medizin - Kräuter, Tee und Heilwissen von Shifu Health"
-                  width={1408} height={768}
-                  className="w-full h-auto object-cover"
-                  style={{ aspectRatio: "16/9" }}
+                  fill
+                  className="object-cover"
                   priority
-                  sizes="(max-width: 768px) 0vw, 50vw"
+                  sizes="50vw"
                 />
               </div>
               <div
                 className="absolute -bottom-4 -left-4 card px-5 py-4 flex items-center gap-3"
-                style={{ boxShadow: "var(--shadow-lg)", border: "1px solid rgba(226, 219, 213, 0.5)", borderRadius: "12px" }}
+                style={{ boxShadow: "var(--shadow-lg)", border: "1px solid rgba(226, 219, 213, 0.5)", borderRadius: 12, zIndex: 10 }}
               >
                 <div className="icon-container"><IconQi /></div>
                 <div>
