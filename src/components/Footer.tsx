@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -19,9 +20,16 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/crane-logo.png"
+              alt="Shifu Health Crane Logo"
+              height={32}
+              width={32}
+              className="object-contain"
+            />
             <span
-              className="font-logo text-[18px] font-semibold"
+              className="font-logo text-[18px] font-medium"
               style={{ color: "var(--color-text-body)", letterSpacing: "-0.5px" }}
             >
               Shifu Health

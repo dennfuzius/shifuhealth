@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useAuth } from "@/lib/auth/auth-context";
+import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import UserMenu from "./UserMenu";
 
@@ -29,9 +30,16 @@ export default function Header() {
       }}
     >
       <div className="mx-auto max-w-6xl px-6 h-full flex items-center justify-between">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src="/images/crane-logo.png"
+            alt="Shifu Health Crane Logo"
+            height={40}
+            width={40}
+            className="object-contain h-10 w-auto md:h-10"
+          />
           <span
-            className="font-logo text-[20px] font-semibold"
+            className="font-logo text-[20px] font-medium"
             style={{ color: "var(--color-text-body)", letterSpacing: "-0.5px" }}
           >
             Shifu Health
