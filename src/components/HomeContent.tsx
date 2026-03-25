@@ -103,11 +103,11 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
             <div className="relative hidden md:block">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/hero-tcm.jpg"
-                  alt="Traditional Chinese Medicine - herbal healing and wellness"
-                  width={800} height={600}
+                  src="/images/hero-main.jpg"
+                  alt="Traditionelle Chinesische Medizin - Kräuter, Tee und Heilwissen von Shifu Health"
+                  width={1408} height={768}
                   className="w-full h-auto object-cover"
-                  style={{ aspectRatio: "4/3" }}
+                  style={{ aspectRatio: "16/9" }}
                   priority
                   sizes="(max-width: 768px) 0vw, 50vw"
                 />
