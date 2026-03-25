@@ -25,14 +25,14 @@ export default async function BlogPreview() {
   if (articles.length === 0) return null;
 
   return (
-    <section className="section-surface py-24">
+    <section className="section-surface">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollAnimator>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2>{t("title")}</h2>
           </div>
         </ScrollAnimator>
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-5 mb-8">
           {articles.map((article) => (
             <ScrollAnimator key={article._id}>
               <Link

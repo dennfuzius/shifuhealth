@@ -7,14 +7,14 @@ import { urlFor } from "@/sanity/client";
 const components: PortableTextComponents = {
   block: {
     normal: ({ children }) => (
-      <p className="font-body mb-7" style={{ lineHeight: 1.85, color: "var(--color-text-body)" }}>
+      <p className="font-body mb-5" style={{ lineHeight: 1.85, color: "var(--color-text-body)" }}>
         {children}
       </p>
     ),
     h2: ({ children }) => (
       <h2
         className="font-body font-bold"
-        style={{ marginTop: "3rem", marginBottom: "1rem", lineHeight: 1.2 }}
+        style={{ marginTop: "2rem", marginBottom: "0.75rem", lineHeight: 1.2 }}
       >
         {children}
       </h2>
@@ -22,7 +22,7 @@ const components: PortableTextComponents = {
     h3: ({ children }) => (
       <h3
         className="font-body font-bold"
-        style={{ marginTop: "2rem", marginBottom: "0.75rem", lineHeight: 1.3 }}
+        style={{ marginTop: "1.5rem", marginBottom: "0.5rem", lineHeight: 1.3 }}
       >
         {children}
       </h3>

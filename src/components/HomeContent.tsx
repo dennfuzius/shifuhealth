@@ -70,29 +70,29 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="pt-28 pb-20 md:pt-36 md:pb-28">
+      <section className="pt-20 pb-10 md:pt-24 md:pb-14" style={{ paddingTop: 72, paddingBottom: 60 }}>
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in-up">
               <div
                 className="w-12 h-1 rounded-full mb-8"
                 style={{ backgroundColor: "var(--color-primary)" }}
               />
-              <h1 className="text-balance mb-6">{t("hero.title")}</h1>
+              <h1 className="text-balance mb-4">{t("hero.title")}</h1>
               <p
-                className="font-body text-lg leading-relaxed mb-6 max-w-lg"
+                className="font-body text-lg leading-relaxed mb-4 max-w-lg"
                 style={{ color: "var(--color-text-secondary)" }}
               >
                 {t("hero.subtitle")}
               </p>
-              <div className="flex flex-wrap gap-x-5 gap-y-2 mb-8">
+              <div className="flex flex-wrap gap-x-5 gap-y-2 mb-5">
                 {[t("hero.trust1"), t("hero.trust2"), t("hero.trust3")].map((item, i) => (
                   <span key={i} className="font-body text-[14px] font-medium" style={{ color: "var(--color-primary)" }}>
                     &#10003; {item}
                   </span>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Link href="/assistent" className="btn-primary">{t("hero.ctaPrimary")}</Link>
                 <Link href="/blog" className="btn-secondary">{t("hero.ctaSecondary")}</Link>
               </div>
@@ -128,21 +128,21 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
       </section>
 
       {/* ═══ TCM PRINCIPLES ═══ */}
-      <section className="section-surface py-24">
+      <section className="section-surface">
         <div className="mx-auto max-w-6xl px-6">
           <ScrollAnimator>
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h2 className="mb-4">{t("tcmIntro.title")}</h2>
             </div>
           </ScrollAnimator>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5">
             {[
               { icon: <IconQi />, titleKey: "qi_title", textKey: "qi_text", quoteKey: "qi_quote" },
               { icon: <IconYinYang />, titleKey: "yinyang_title", textKey: "yinyang_text", quoteKey: "yinyang_quote" },
               { icon: <IconFiveEl />, titleKey: "elements_title", textKey: "elements_text", quoteKey: "elements_quote" },
             ].map((item, i) => (
               <ScrollAnimator key={i}>
-                <div className="card p-8 hover:shadow-md transition-shadow duration-300">
+                <div className="card p-5 hover:shadow-md transition-shadow duration-300">
                   <div className="icon-container mb-5">{item.icon}</div>
                   <h3 className="font-body text-xl font-semibold mb-3">
                     {t(`tcmIntro.${item.titleKey}` as "tcmIntro.qi_title")}
@@ -161,9 +161,9 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
       </section>
 
       {/* ═══ SHIFU QI ═══ */}
-      <section className="py-24">
+      <section className="">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
             <ScrollAnimator>
               <div>
                 <div className="w-12 h-1 rounded-full mb-8" style={{ backgroundColor: "var(--color-primary)" }} />
@@ -198,10 +198,10 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
       {blogPreview}
 
       {/* ═══ FIVE ELEMENTS ═══ */}
-      <section className="py-24">
+      <section className="">
         <div className="mx-auto max-w-6xl px-6">
           <ScrollAnimator>
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h2>{t("fiveElements.title")}</h2>
             </div>
           </ScrollAnimator>
@@ -226,7 +226,7 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
             ))}
           </div>
           <div className="max-w-2xl mx-auto">
-            <div className="card p-8 md:p-12" style={{ border: "1px solid rgba(226, 219, 213, 0.4)" }}>
+            <div className="card p-6 md:p-8" style={{ border: "1px solid rgba(226, 219, 213, 0.4)" }}>
               <div className="text-center mb-6">
                 <span className="font-body text-5xl block mb-2" style={{ color: activeEl.color, opacity: 0.3 }}>
                   {t(`fiveElements.${activeElement}Symbol` as "fiveElements.woodSymbol")}
@@ -259,11 +259,11 @@ export default function HomeContent({ blogPreview }: { blogPreview?: React.React
       </section>
 
       {/* ═══ NEWSLETTER ═══ */}
-      <section className="section-surface py-24">
+      <section className="section-surface">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-2xl mx-auto card p-10 md:p-16 text-center" style={{ border: "1px solid rgba(226, 219, 213, 0.4)" }}>
+          <div className="max-w-2xl mx-auto card p-8 md:p-10 text-center" style={{ border: "1px solid rgba(226, 219, 213, 0.4)" }}>
             <h2 className="text-2xl md:text-3xl mb-3">{t("newsletter.title")}</h2>
-            <p className="font-body text-base leading-relaxed mb-8" style={{ color: "var(--color-text-secondary)" }}>
+            <p className="font-body text-base leading-relaxed mb-6" style={{ color: "var(--color-text-secondary)" }}>
               {t("newsletter.subtitle")}
             </p>
             <NewsletterForm />

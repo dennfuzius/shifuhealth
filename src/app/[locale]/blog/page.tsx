@@ -53,7 +53,7 @@ export default async function BlogPage() {
     <div>
       {/* ── HERO ── */}
       <section
-        className="pt-28 pb-16 px-6"
+        className="pt-20 pb-10 px-6"
         style={{ backgroundColor: "var(--color-bg)" }}
       >
         <div className="mx-auto max-w-5xl text-center">
@@ -83,7 +83,7 @@ export default async function BlogPage() {
       {/* ── FEATURED ARTICLES ── */}
       {featured.length > 0 && (
         <section
-          className="py-16 px-6"
+          className="px-6"
           style={{ backgroundColor: "var(--color-surface)" }}
         >
           <div className="mx-auto max-w-5xl">
@@ -174,7 +174,7 @@ export default async function BlogPage() {
       )}
 
       {/* ── CATEGORIES ── */}
-      <section className="py-16 px-6" style={{ backgroundColor: "var(--color-bg)" }}>
+      <section className="px-6" style={{ backgroundColor: "var(--color-bg)" }}>
         <div className="mx-auto max-w-5xl">
           <h2
             className="font-body text-xl font-bold mb-8"
@@ -230,7 +230,7 @@ export default async function BlogPage() {
 
       {/* ── ALL ARTICLES with filter ── */}
       <section
-        className="py-16 px-6"
+        className="px-6"
         style={{ backgroundColor: "var(--color-bg)" }}
       >
         <div className="mx-auto max-w-5xl">

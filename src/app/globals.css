@@ -43,7 +43,20 @@
   --radius-icon: 12px;
 
   /* ── Spacing ── */
-  --section-py: 96px;
+  --section-py: 60px;
+}
+
+/* ── Global section spacing ── */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 @layer base {
