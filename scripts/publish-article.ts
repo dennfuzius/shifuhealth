@@ -113,6 +113,15 @@ function textToBlocks(text: string): object[] {
 
     // Detect headings (lines starting with ## or ###)
     const trimmed = paragraph.trim();
+    // Detect image placeholders [SANITY_IMAGE:asset-id]
+    const imageMatch = trimmed.match(/^\[SANITY_IMAGE:(image-[^\]]+)\]$/);
+    if (imageMatch) {
+      return {
+        _type: "image",
+        _key: crypto.randomUUID().slice(0, 8),
+        asset: { _type: "reference", _ref: imageMatch[1] },
+      };
+    }
     if (trimmed.startsWith("### ")) {
       return {
         _type: "block",
